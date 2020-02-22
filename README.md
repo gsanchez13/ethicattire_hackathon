@@ -20,7 +20,8 @@ Solution -
   | ------ | ------------ | --------------------- | ------------------------ |
   | GET    | `/users`     | Get all users         | n/a                      |
   | GET    | `/users/:id` | Get single user by id | n/a                      |
-  | POST   | `/users/`    | Add new user          |  `username` |
+  | POST   | `/users/`    | Add new user          |  `username`              |
+  | GET   | `/users/style/:id`| get style for user by id |                   |
 
 - **Fabrics**
 
