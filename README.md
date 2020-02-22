@@ -14,7 +14,7 @@ Solution -
     We should incorporate timeless pieces as opposed to just trendy clothing.
     Cutting down on the environmental impact though changing consumer choices focused on their wardrobe.
 
-    - **Users**
+- **Users**
 
   | Method | Endpoint     | Description           | Body Data                |
   | ------ | ------------ | --------------------- | ------------------------ |
