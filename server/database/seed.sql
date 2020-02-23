@@ -11,6 +11,11 @@ CREATE TABLE users (
    style BOOLEAN
 );
 
+CREATE TABLE fabrics (
+   id SERIAL PRIMARY KEY,
+   fabric_type VARCHAR
+);
+
 CREATE TABLE items (
    id SERIAL PRIMARY KEY,
    item_img VARCHAR,
@@ -20,13 +25,9 @@ CREATE TABLE items (
    color VARCHAR
 );
 
-CREATE TABLE fabrics (
-   id SERIAL PRIMARY KEY,
-   fabric_type VARCHAR
-);
 
 INSERT INTO users (username, password, style) 
-   VALUES ('sharr', 'east', 0);
+   VALUES ('sharr', 'east', false);
 
 INSERT INTO fabrics (fabric_type) 
    VALUES   ('cotton'),
