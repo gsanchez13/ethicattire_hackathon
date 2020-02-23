@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const fabricsQuery = require('../database/queries/fabricsQuery')
 
 router.get('/', async(res, req, next) => {

@@ -1,7 +1,8 @@
 const db = require("../pgExport");
 
 const getAllFabrics = async() => {
-    const data = await db.any("SELECT * FROM fabrics")
+    const getAllFabricsQuery = `SELECT * FROM fabrics`
+    const data = await db.any(getAllFabricsQuery)
     return data
 }
 
