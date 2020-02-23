@@ -2,37 +2,65 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#headerComponentContainer {
+  border: solid 1px;
+  display: inline-block;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nameOfAppDiv {
+  text-align: left;
+  height: 1%;
+  width: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#nameOfAppHeaderTag {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+#navbarContainer {
+  border: solid 1px;
+  display: inline-block;
+  width: 70%;
+  height: 50%;
+  margin-left: 2%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HeaderNavElements {
+  display: inline-block;
+  text-align: center;
+  width: 15%;
+}
+
+#ClothingChecklistHeaderTag {
+  text-align: center;  
+}
+
+.componentHeaderDiv {
+  width: 30%;
+  margin-top: 1%;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 1px;
+}
+
+#myClosetContentDiv {
+  width: 30%;
+  height: 60%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 1px;
+}
+
+.inputCaption {
+  display: inline-block;
+}
+
+.inputField {
+  width: 80%;
+  height: 30px;
 }
