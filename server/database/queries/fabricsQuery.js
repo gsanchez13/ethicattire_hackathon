@@ -7,7 +7,7 @@ const getAllFabrics = async() => {
 }
 
 const getFabricsById = async (id) => {
-    const getFabricQuery = `SELECT id, fabric_name from fabrics WHERE id = $1`
+    const getFabricQuery = `SELECT id, fabric_type from fabrics WHERE id = $1`
     const data = await db.any(getFabricQuery, [id]);
     return data
 }
