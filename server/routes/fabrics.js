@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fabricsQuery = require('../database/queries')
-
+ 
 router.get('/', async(res, req, next) => {
     try {
         let data = await fabricsQuery.getAllFabrics()
