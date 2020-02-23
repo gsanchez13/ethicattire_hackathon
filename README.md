@@ -1,5 +1,5 @@
 # ethicattire_hackathon
-![database diagram](ethicattiredb.io.pdf)
+![database diagram](database.png)
 
 App Name -
     Ethic Attire
