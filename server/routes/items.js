@@ -29,7 +29,7 @@ router.post('/', async (req, res, next) => {
     res.status(200)
       .json({
         payload: postedItem,
-        msg: "All items retrieved.",
+        msg: "Item Posted.",
         err: false
       })
   }
