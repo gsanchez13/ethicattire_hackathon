@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userQueries = require('../db/queries/users')
+const userQueries = require('../pgExport/queries/users')
 
 router.get('/user/:id', async (req, res) => {
     try {
