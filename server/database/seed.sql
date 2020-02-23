@@ -58,6 +58,6 @@ INSERT INTO items (item_img, fabric_id, item_type, user_id, color)
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',9, 'jacket', 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',10, 'sweats', 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',11, 'jeans', 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',12, '', 1, 'blue'),
+            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',12, 'hat', 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',13, 'jeans', 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',14, 'jeans', 1, 'blue');
