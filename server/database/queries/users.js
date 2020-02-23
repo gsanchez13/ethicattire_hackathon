@@ -1,4 +1,4 @@
-const db = require('../db')
+const db = require('../pgExport')
 
 const addNewUser = async (user) => {
 	const newUserQuery = `
