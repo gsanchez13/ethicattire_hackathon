@@ -20,7 +20,7 @@ const upload = multer ({
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var fabricsRouter = require('./routes/fabrics')
 var app = express();
 
 app.use(logger('dev'));
@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/fabrics', fabricsRouter)
 
 app.post('/upload', upload.single ("image"), (req,res,next) => {
 

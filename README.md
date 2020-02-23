@@ -1,5 +1,5 @@
 # ethicattire_hackathon
-![database diagram](database.png)
+Wireframes located in wireframes folder
 
 App Name -
     Ethic Attire
