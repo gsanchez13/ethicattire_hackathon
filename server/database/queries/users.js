@@ -11,8 +11,8 @@ const addNewUser = async (user) => {
    
 }
 
-const getUserById = async (username) => {
-        const user = await db.oneOrNone("SELECT * FROM users WHERE id = $1", [username])
+const getUserById = async (user_id) => {
+        const user = await db.oneOrNone("SELECT * FROM users WHERE id = $1", [user_id])
         return user;
     
 }
