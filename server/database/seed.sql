@@ -46,7 +46,7 @@ INSERT INTO fabrics (fabric_type, score)
             ('cotton-polyester', 0),
             ('polyester-spandex', 0);
 
-INSERT INTO items (fabric_id, item_img, item_type, user_id, color)
+INSERT INTO items (item_img,fabric_id,, item_type, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 'jeans', 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',2, 'shirt', 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',3, 'sweater', 1, 'blue'),
