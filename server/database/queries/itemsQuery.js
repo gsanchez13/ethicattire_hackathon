@@ -5,9 +5,9 @@ const getAllItems = async () => {
         const data = await db.any(GETALLITEMSQUERY);
         return data;
 };
-const postNewItem = async(item_img, fabric_id, item_type, user_id, color) => {
-    const POSTNEWITEMQUERY = `INSERT INTO items(item_img, fabric_id, item_type, user_id, color) VALUES ($1, $2, $3, $4, $5) RETURNING *`;
-        const newItem = await db.any(POSTNEWITEMQUERY, [item_img, fabric_id, item_type, user_id, color]);
+const postNewItem = async(item_img, fabric_id, clothes_id, user_id, color) => {
+    const POSTNEWITEMQUERY = `INSERT INTO items(item_img, fabric_id, clothes_id, user_id, color) VALUES ($1, $2, $3, $4, $5) RETURNING *`;
+        const newItem = await db.any(POSTNEWITEMQUERY, [item_img, fabric_id, clothes_id, user_id, color]);
         return newItem;
 };
 
