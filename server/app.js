@@ -1,8 +1,8 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var multer = require ('multer');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const multer = require ('multer');
 
 const storage = multer.diskStorage({
    destination: (req, file, cb) => {
@@ -18,10 +18,10 @@ const upload = multer ({
    storage: storage
 })
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var fabricsRouter = require('./routes/fabrics')
-var app = express();
+const itemsRouter = require('./routes/items');
+const usersRouter = require('./routes/users');
+const fabricsRouter = require('./routes/fabrics')
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
