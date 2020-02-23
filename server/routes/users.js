@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userQueries = require('../pgExport/queries/users')
+const userQueries = require('../database/queries/users')
 
 router.get('/user/:id', async (req, res) => {
     try {
@@ -21,7 +21,7 @@ router.get('/user/:id', async (req, res) => {
     }
 })
 
-router.post('/signUp') = async (req, res) => {
+router.post('/signUp', async (req, res) => {
 
     try {
         let userInfo = {
@@ -43,6 +43,6 @@ router.post('/signUp') = async (req, res) => {
             err: true
         })
     }
-}
+})
 
 module.exports = router;
