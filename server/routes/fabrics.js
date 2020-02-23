@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fabricsQuery = require('../database/queries/fabricsQuery')
 
-router.get('/', async(res, req, next) => {
+router.get('/', async(req, res, next) => {
     try {
         let data = await fabricsQuery.getAllFabrics()
         res.json({
