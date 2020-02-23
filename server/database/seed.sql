@@ -13,6 +13,7 @@ CREATE TABLE users (
 
 CREATE TABLE items (
    id SERIAL PRIMARY KEY,
+   item_img VARCHAR,
    fabric_id INT REFERENCES fabrics (id),
    item_type VARCHAR,
    user_id INT REFERENCES users (id),
