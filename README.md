@@ -14,13 +14,14 @@ Solution -
     We should incorporate timeless pieces as opposed to just trendy clothing.
     Cutting down on the environmental impact though changing consumer choices focused on their wardrobe.
 
-    - **Users**
+- **Users**
 
   | Method | Endpoint     | Description           | Body Data                |
   | ------ | ------------ | --------------------- | ------------------------ |
   | GET    | `/users`     | Get all users         | n/a                      |
   | GET    | `/users/:id` | Get single user by id | n/a                      |
-  | POST   | `/users/`    | Add new user          |  `username` |
+  | POST   | `/users/`    | Add new user          |  `username`              |
+  | GET   | `/users/style/:id`| get style for user by id |                   |
 
 - **Fabrics**
 
