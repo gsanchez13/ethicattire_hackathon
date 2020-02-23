@@ -15,13 +15,19 @@ const getAllItemsForFabric = async (fabric_id) => {
     const GETALLITEMSFORFABRICQUERY = `SELECT * FROM items
     INNER JOIN fabrics ON items.fabric_id = fabrics.id
     INNER JOIN users ON items.user_id = users.id
-    WHERE fabric.id =  $1`;
+    WHERE fabrics.id =  $1`;
     const allItemsForFabric = await db.any(GETALLITEMSFORFABRICQUERY, [fabric_id]);
     return allItemsForFabric;
+}
+const getAllClothingTypes = async () => {
+    const GETALLCLOTHINGTYPESQUERY = `SELECT * FROM clothes`;
+    const allClothing = await db.any(GETALLCLOTHINGTYPESQUERY);
+    return allClothing;
 }
 
 module.exports = {
     getAllItems,
     postNewItem,
-    getAllItemsForFabric
+    getAllItemsForFabric,
+    getAllClothingTypes
 };
