@@ -23,13 +23,13 @@ router.get('/', async (req, res, next) => {
 });
 
 router.post('/', async (req, res, next) => {
-  const { item_img, fabric_id, item_type, user_id, color } = req.body;
+  const { item_img, fabric_id, clothes_id, user_id, color } = req.body;
   try {
-    let postedItem = await itemsQueries.postNewItem(item_img, fabric_id, item_type, user_id, color);
+    let postedItem = await itemsQueries.postNewItem(item_img, fabric_id, clothes_id, user_id, color);
     res.status(200)
       .json({
         payload: postedItem,
-        msg: "Item Posted.",
+        msg: "Item posted.",
         err: false
       })
   }
@@ -37,7 +37,27 @@ router.post('/', async (req, res, next) => {
     console.log(err)
     res.json({
       payload: null,
-      msg: "Item not posted",
+      msg: "Item not posted.",
+      err: true
+    })
+  }
+});
+
+router.get('/types', async (req, res, next) => {
+  try {
+    let allClothingTypes = await itemsQueries.getAllClothingTypes();
+    res.status(200)
+    .json({
+      payload: allClothingTypes,
+      msg: "All clothing types retrieved.",
+      err: false
+    })
+  }
+  catch(err) {
+    console.log(err)
+    res.json({
+      payload: null,
+      msg: "All clothing types not retrieved.",
       err: true
     })
   }
@@ -50,7 +70,7 @@ router.get('/:fabricId', async (req, res, next) => {
     res.status(200)
       .json({
         payload: allItemsForFabric,
-        msg: "All items retrieved.",
+        msg: "All items for fabric retrieved.",
         err: false
       })
   }
@@ -58,10 +78,11 @@ router.get('/:fabricId', async (req, res, next) => {
     console.log(err)
     res.json({
       payload: null,
-      msg: "All items not retrieved",
+      msg: "All items not retrieved.",
       err: true
     })
   }
 });
+
 
 module.exports = router;
