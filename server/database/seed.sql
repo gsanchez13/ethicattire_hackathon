@@ -14,16 +14,14 @@ CREATE TABLE users (
 CREATE TABLE fabrics (
    id SERIAL PRIMARY KEY,
    fabric_type VARCHAR,
-<<<<<<< HEAD
+   score INT,
    fabric_desc VARCHAR
-=======
-   score INT
+   
 );
 
 CREATE TABLE clothes (
    id SERIAL PRIMARY KEY,
-   clothes_type VARCHAR
->>>>>>> e44383d0cde498618f02eb72545c05ead7a03c5c
+
 );
 
 CREATE TABLE items (
@@ -39,9 +37,8 @@ CREATE TABLE items (
 INSERT INTO users (username, password, style) 
    VALUES ('sharr', 'east', false);
 
-<<<<<<< HEAD
-INSERT INTO fabrics (fabric_type, fabric_desc) 
-   VALUES   ('cotton','Cotton is one of the most commonly used fabrics. This 
+INSERT INTO fabrics (fabric_type, score, fabric_desc) 
+   VALUES   ('cotton', 1, 'Cotton is one of the most commonly used fabrics. This 
                      natural fibre is light and breathable but 
                      growing cotton can be problematic: conventional cotton is one of the thirstiest 
                      and most chemical-intensive crops to grow. It requires a lot of pesticides and, 
@@ -52,14 +49,14 @@ INSERT INTO fabrics (fabric_type, fabric_desc)
                      upcycled cotton is made using post-industrial and post-consumer cotton waste. 
                      Recycled cotton has the potential to help reduce water and energy consumption, as well as help keep cotton 
                      clothes out of landfill.'),
-            ('hemp','Hemp is gaining popularity. Marijuana’s ‘sober cousin’ is extremely 
+            ('hemp', 1, 'Hemp is gaining popularity. Marijuana’s ‘sober cousin’ is extremely 
                         versatile: it’s used as a food, a building material, in cosmetics, and is one of the oldest fibres in the world,
                         used for hundreds of years as a fabric. The great thing about hemp is that it’s grown all around the
                         world and it requires very little water, no pesticides, and naturally fertilises the soil it grows 
                         in – making it much better for the environment than other crops.
                         Hemp helps keep you warm in winter and cool in summer, and gets softer the more you wash it. For all these reasons, we also consider hemp one of the most 
                         sustainable fabrics out there.'),
-            ('polyester','Polyester is a man-made fiber that is synthesized from petroleum-based products. Polyester cloth was invented in 1941, so 
+            ('polyester', 0, 'Polyester is a man-made fiber that is synthesized from petroleum-based products. Polyester cloth was invented in 1941, so 
                         comparing to cotton, this fabric is a fairly new player in the game. The majority of polyesters are not biodegradable meaning 
                         that the polyester fabric shirt you bought last season will not decompose for 20 years at best and 200 years at worst, depending 
                         on conditions.
@@ -73,12 +70,12 @@ INSERT INTO fabrics (fabric_type, fabric_desc)
                         True, it does come from an unsustainable source, however, plastic bottles are actually recycled into 
                         polyester fabric, which is pretty amazing, but, on the downside, plastic is not compostable, which means 
                         it doesn’t break down well in soil.'),
-            ('linen', 'Linen is another natural fibre we’ve been growing for centuries. Similar to hemp, it’s derived from a 
+            ('linen', 1, 'Linen is another natural fibre we’ve been growing for centuries. Similar to hemp, it’s derived from a 
                         very versatile crop: the flax plant. Linen requires minimal water and pesticides, and grows in 
                         poor-quality soil. Plus, every part of the plant is used, so nothing is wasted. Linen is strong, naturally 
                         moth resistant, and, when untreated (i.e. not dyed), fully biodegradable. In addition to being good for the 
                         planet, it is also light and can withstand high temperatures, absorbing moisture without holding bacteria.'),
-            ('silk', 'Silk is one of the most luxurious types of fabric used in the fashion industry and also in products for the home. 
+            ('silk', 1, 'Silk is one of the most luxurious types of fabric used in the fashion industry and also in products for the home. 
                       You can find it in cushions, pillow and duvet covers, bedspreads, lampshades and others. According to a Chinese 
                       legend, it was discovered by an empress who was sipping her tea under a mulberry tree when a cocoon fell into her 
                       cup and began to open up to reveal the shiny fibres. There is no doubt that silk is a beautiful material. It 
@@ -94,12 +91,7 @@ INSERT INTO fabrics (fabric_type, fabric_desc)
                       can be toxic and sometimes formaldehyde can be used in the finishing process of silk, which could affect your health. To avoid 
                       having any toxic materials in your home look for undyed silk or silk dyed with non-toxic dyes. Also, have a look for silk that is finished 
                       with citric acid rather than formaldehyde.'),
-            ('jersey'),
-            ('lycra'),
             ('spandex'),
-            ('lace'),
-            ('crepe'),
-            ('velvet'),
             ('cotton-spandex'),
             ('polyester-cotton-rayon'),
             ('cotton-polyester'),
@@ -108,7 +100,7 @@ INSERT INTO fabrics (fabric_type, fabric_desc)
 INSERT INTO items (fabric_id, item_img, item_type, user_id, color)
    VALUES   (11,'https://pngimg.com/uploads/jeans/jeans_PNG5745.png', 'jeans', 1, 'blue');
             
-=======
+
 INSERT INTO fabrics (fabric_type, score) 
    VALUES   ('cotton', 1),
             ('polyester', 0),
@@ -141,4 +133,4 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',7, 6, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',8, 9, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',9, 7, 1, 'blue');
->>>>>>> e44383d0cde498618f02eb72545c05ead7a03c5c
+
