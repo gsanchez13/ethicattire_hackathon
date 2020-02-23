@@ -7,7 +7,7 @@ const getAllItems = async () => {
 };
 const postNewItem = async(fabric_id, item_type, user_id, color) => {
     const POSTNEWITEMQUERY = `INSERT INTO items(item_img, fabric_id, item_type, user_id, color) VALUES ($1, $2, $3, $4, $5) RETURNING *`;
-        const newItem = await db.any(POSTNEWITEMQUERY, [item_img, fabric_id, item_type, user_id, color])
+        const newItem = await db.any(POSTNEWITEMQUERY, [item_img, fabric_id, item_type, user_id, color]);
         return newItem;
 };
 
