@@ -5,9 +5,7 @@ const GetItems = (props) => {
     {console.log("props:", props)}
     return(
         <div>
-            {
-<h1>test</h1>
-            }
+            {props.data}
         </div>
     );
 }

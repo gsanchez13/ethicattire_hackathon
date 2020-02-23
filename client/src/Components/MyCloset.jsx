@@ -13,47 +13,29 @@ class MyCloset extends React.Component {
     }
 
     async componentDidMount() {
-        // await this.getAllItems()
-    console.log(this.state.data)
+            console.log(this.state.data)
 
-             try {
-            let clothes = await axios.get(`http://localhost:3000/items/`);
-            console.log("clothes:", clothes);
-            console.log(clothes.data.payload)
-            let newData = [...this.state.data];
-            console.log("newData:", newData);
-            clothes.data.payload.map(element => {
-                newData.push(element)
-            });
-            this.setState({
-                data: newData
-            });
+            try {
+                let clothes = await axios.get(`http://localhost:3000/items/`);
+                console.log("clothes:", clothes);
+                console.log(clothes.data.payload)
+                let newData = [...this.state.data];
+                console.log("newData:", newData);
+                clothes.data.payload.map(element => {
+                    newData.push(element.item_type)
+                });
 
-        } catch (err) {
-            console.log("ERROR:", err);
+                this.setState({
+                    data: newData
+                });
+
+            } catch (err) {
+                console.log("ERROR:", err);
         }
-    }
-    getAllItems = async () => {
-        // try {
-        //     let clothes = await axios.get(`http://localhost:3000/items/`);
-        //     console.log("clothes:", clothes);
-        //     console.log(clothes.data.payload)
-        //     let newData = [...this.state.data];
-        //     console.log("newData:", newData);
-        //     clothes.data.payload.map(element => {
-        //         newData.push(element)
-        //     });
-        //     this.setState({
-        //         data: newData
-        //     });
-
-        // } catch (err) {
-        //     console.log("ERROR:", err);
-        // }
     }
 
     render() {
-        // const { user, data } = this.state;
+        const { user, data } = this.state;
         return (
             <div>
                 <Header />
@@ -61,7 +43,7 @@ class MyCloset extends React.Component {
                     <h2 className="componentHeaderTag">Clothing Checklist</h2>
                 </div>
                 <div id="myClosetContentDiv">
-                {this.state.data ? (<GetItems data={this.state.data} />) : null}
+                {this.state.data ? (<GetItems data={data} />) : null}
                     
                 </div>
             </div>
