@@ -21,7 +21,7 @@ CREATE TABLE fabrics (
 
 CREATE TABLE clothes (
    id SERIAL PRIMARY KEY,
-
+   clothes_type VARCHAR
 );
 
 CREATE TABLE items (
@@ -91,15 +91,12 @@ INSERT INTO fabrics (fabric_type, score, fabric_desc)
                       can be toxic and sometimes formaldehyde can be used in the finishing process of silk, which could affect your health. To avoid 
                       having any toxic materials in your home look for undyed silk or silk dyed with non-toxic dyes. Also, have a look for silk that is finished 
                       with citric acid rather than formaldehyde.'),
-            ('spandex'),
-            ('cotton-spandex'),
-            ('polyester-cotton-rayon'),
-            ('cotton-polyester'),
-            ('polyester-spandex');
+            ('spandex', 0, 'Spandex description'),
+            ('cotton-spandex', 0, 'Cotton spandex description'),
+            ('polyester-cotton-rayon', 0, 'Polyester cotton rayon description.'),
+            ('cotton-polyester', 0, 'Cotton polyester description'),
+            ('polyester-spandex', 0, 'Polyester spandex description');
 
-INSERT INTO items (fabric_id, item_img, item_type, user_id, color)
-   VALUES   (11,'https://pngimg.com/uploads/jeans/jeans_PNG5745.png', 'jeans', 1, 'blue');
-            
 
 INSERT INTO fabrics (fabric_type, score) 
    VALUES   ('cotton', 1),
