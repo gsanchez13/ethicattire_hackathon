@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom';
-// import Header from "./Components/Header";
+import Header from "./Components/Header";
 import About from "./Components/About";
 import Fabrics from "./Components/Fabrics";
 import MyCloset from "./Components/MyCloset";
@@ -20,13 +20,13 @@ class App extends React.Component {
       <div className="App">
           <Switch>
             <Route exact path="/" />
-            <Route path="/about" component={About} />
-            <Route path="/fabrics" component={Fabrics} />
-            <Route path="/myCloset" component={MyCloset} />
-            <Route path="/shops" component={Shops} />
-            <Route path="/mission" component={Mission} />
-            <Route path="/login" component={Login} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/fabrics" component={Fabrics} />
+            <Route exact path="/myCloset" component={MyCloset} />
+            <Route exact path="/shops" component={Shops} />
+            <Route exact path="/mission" component={Mission} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
       </div>
     );
