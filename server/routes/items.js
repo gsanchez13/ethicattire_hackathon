@@ -62,7 +62,6 @@ router.get('/types', async (req, res, next) => {
     })
   }
 });
-
 router.get('/:fabricId', async (req, res, next) => {
   let fabric_id = req.params.fabricId;
   try {
@@ -83,6 +82,25 @@ router.get('/:fabricId', async (req, res, next) => {
     })
   }
 });
-
+router.get('/user/:user_id/clothes/:clothes_id', async(req, res, next) => {
+  const {user_id, clothes_id} = req.params;
+  try {
+    let usersClothing = await itemsQueries.getAllItemsByTypeAndUser(user_id, clothes_id);
+    res.status(200)
+      .json({
+        payload: usersClothing,
+        msg: "All items for user by clothing type.",
+        err: false
+      })
+  }
+  catch(err) {
+    console.log(err);
+    res.json({
+      payload: null,
+      msg: "Could not retrieve items for user.",
+      err: true
+    })
+  }
+});
 
 module.exports = router;
