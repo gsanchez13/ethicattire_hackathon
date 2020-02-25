@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class ClothingItem extends Component {
     constructor() {
         super();
@@ -10,8 +11,8 @@ class ClothingItem extends Component {
         }
     }
     componentDidMount = async () => {
-        const userId = this.props.params.match.id;
-        const clothingId = this.props.params.match.id;
+        const userId = this.props.params.match.userId;
+        const clothingId = this.props.params.match.clothesId;
         this.setClothingState = await (userId, clothingId);
     }
     getUsersItem = async (userId, clothesId) => {
@@ -37,7 +38,7 @@ class ClothingItem extends Component {
                     <h3>{item.username}'s {item.clothes_type}</h3>
                     <img src={item.item_img} alt={item.clothes_type} className="clothes-image"/>
                     <h4>Material:</h4>
-                    <Link to={`/fabrics/${item.fabric_id}`}>
+                    <Link to={`/fabrics/${item.clothes_type}`}>
                     <p>{item.fabric_type}</p>
                     </Link>
                 </div>
