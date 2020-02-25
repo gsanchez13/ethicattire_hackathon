@@ -20,18 +20,15 @@ class Item extends React.Component {
   async componentDidMount() {
     let fabResponse = await axios.get('http://localhost:3000/fabrics');
     let tyResponse = await axios.get('http://localhost:3000/items/types');
-    console.log(tyResponse)
-    let fabOpts = [];
-    let typeOpts = [];
 
-    let fabricNames = []
-    let clothesNames = []
+    let fabricNames = [];
+    let clothesNames = [];
 
     for (let i = 0; i < fabResponse.data.payload.length; i++) {
-      fabricNames.push(fabResponse.data.payload[i].fabric_type)
+      fabricNames.push(fabResponse.data.payload[i].fabric_type);
     }
     for (let i = 0; i < tyResponse.data.payload.length; i++) {
-      clothesNames.push(tyResponse.data.payload[i].clothes_type)
+      clothesNames.push(tyResponse.data.payload[i].clothes_type);
     }
 
     this.setState({
@@ -39,11 +36,11 @@ class Item extends React.Component {
       types: clothesNames
     })
 
-    this.populateSelect()
+    this.populateSelect();
   }
 
   handleInput = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
     this.setState({
       [name]: value
     })
@@ -51,11 +48,11 @@ class Item extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { image, fabChoice, typeChoice, colorChoice } = this.state
-    const data = new FormData()
-    data.append('image', this.state.image)
+    const { image, fabChoice, typeChoice, colorChoice } = this.state;
+    const data = new FormData();
+    data.append('image', this.state.image);
     try {
-      const res = await axios.post('http://localhost:3000/items', data)
+      const res = await axios.post('http://localhost:3000/items', data);
       const post = axios.post(`http://localhost:3000/items`, { item_img: image, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
       this.setState({
         image: res.data.image,
@@ -78,10 +75,10 @@ class Item extends React.Component {
     let typeOpts = [];
 
     for (let i = 0; i < fabrics.length; i++) {
-      fabOpts.push(<option value={i + 1} key={fabrics[i]}>{fabrics[i]}</option>)
+      fabOpts.push(<option value={i + 1} key={fabrics[i]}>{fabrics[i]}</option>);
     }
     for (let i = 0; i < types.length; i++) {
-      typeOpts.push(<option value={i + 1} key={types[i]}>{types[i]}</option>)
+      typeOpts.push(<option value={i + 1} key={types[i]}>{types[i]}</option>);
     }
 
     this.setState({
