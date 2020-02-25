@@ -2,14 +2,17 @@ import React from "react";
 import Header from "./Header";
 import axios from "axios";
 import GetItems from "./GetItems";
+import { Switch, Route, withRouter, Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
+
 
 class MyCloset extends React.Component {
     constructor() {
         super();
         this.state = {
             user: '1',
-            data: []
+            data: [],
+            clothesId: ""
         }
     }
 
@@ -19,7 +22,8 @@ class MyCloset extends React.Component {
             try {
                 let clothes = await axios.get(`http://localhost:3000/items/`);
                 console.log("clothes:", clothes);
-                console.log(clothes.data.payload)
+                console.log("clothes.data:", clothes.data)
+                console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
                 let newData = [...this.state.data];
                 console.log("newData:", newData);
                 clothes.data.payload.map(element => {
@@ -27,8 +31,10 @@ class MyCloset extends React.Component {
                 });
 
                 this.setState({
-                    data: newData
+                    data: newData,
+                    clothesId: clothes.data.payload[0].id
                 });
+                console.log("state:", this.state);
 
             } catch (err) {
                 console.log("ERROR:", err);
@@ -36,7 +42,7 @@ class MyCloset extends React.Component {
     }
 
     render() {
-        const { user, data } = this.state;
+        const { user, data, clothesId } = this.state;
         return (
             <div>
                 <Header />
@@ -45,7 +51,7 @@ class MyCloset extends React.Component {
                     <h2 className="componentHeaderTag">Clothing Checklist</h2>
                 </div>
                 <div id="myClosetContentDiv">
-                {this.state.data ? (<GetItems data={data} />) : null}
+                {this.state.data ? (<Link to={`/closet/user/${user}/clothes/${clothesId}`}><GetItems data={data} /></Link>) : null}
                     
                 </div>
             </div>
