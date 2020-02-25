@@ -82,6 +82,7 @@ router.get('/:fabricId', async (req, res, next) => {
     })
   }
 });
+
 router.get('/user/:user_id/clothes/:clothes_id', async(req, res, next) => {
   const {user_id, clothes_id} = req.params;
   try {
