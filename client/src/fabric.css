@@ -1,0 +1,22 @@
+.FabricTitle {
+    font-family: 'Questrial';
+    color:blue;
+  }
+
+.FabricTitle:hover{
+    color:rgb(141, 86, 250);
+}
+  .FabricDesc {
+    color: black;
+    font-family: 'Asap' ;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  .FabricImg{
+      width: 300px;
+      border: 4px solid black;
+  }
+  
+ 
