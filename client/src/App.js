@@ -9,7 +9,10 @@ import Shops from "./Components/Shops";
 import Mission from "./Components/Mission";
 import Login from "./Components/Login";
 import Contact from "./Components/Contact";
-
+import Cotton from "./Components/FabricItems/Cotton"
+import Linen from "./Components/FabricItems/Linen"
+import Silk from "./Components/FabricItems/Silk"
+import Polyester from "./Components/FabricItems/Polyester"
 class App extends React.Component {
   state = {
     user: ""
@@ -27,6 +30,10 @@ class App extends React.Component {
             <Route exact path="/mission" component={Mission} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/Cotton" component={Cotton} />
+            <Route exact path="/Linen" component={Linen} />
+            <Route exact path="/Polyester" component={Polyester} />
+            <Route exact path="/Silk" component={Silk} />
           </Switch>
       </div>
     );
