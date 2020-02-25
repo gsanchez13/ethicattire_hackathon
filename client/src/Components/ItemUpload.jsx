@@ -1,31 +1,119 @@
 import React from 'react';
 import axios from 'axios';
-import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
 
-this.state {
-   fabrics: []
-   types: []
+class Item extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      fabrics: [],
+      types: [],
+      fabOptions: [],
+      typeOptions: [],
+      fabChoice: '',
+      typeChoice: '',
+      colorChoice: '',
+      image: null,
+    }
+  }
+
+  async componentDidMount() {
+    let fabResponse = await axios.get('http://localhost:3000/fabrics');
+    let tyResponse = await axios.get('http://localhost:3000/items/types');
+
+    let fabricNames = [];
+    let clothesNames = [];
+
+    for (let i = 0; i < fabResponse.data.payload.length; i++) {
+      fabricNames.push(fabResponse.data.payload[i].fabric_type);
+    }
+    for (let i = 0; i < tyResponse.data.payload.length; i++) {
+      clothesNames.push(tyResponse.data.payload[i].clothes_type);
+    }
+
+    this.setState({
+      fabrics: fabricNames,
+      types: clothesNames
+    })
+
+    this.populateSelect();
+  }
+
+  handleInput = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const { image, fabChoice, typeChoice, colorChoice } = this.state;
+    const data = new FormData();
+    data.append('image', this.state.image);
+    try {
+      const res = await axios.post('http://localhost:3000/items', data);
+      const post = axios.post(`http://localhost:3000/items`, { item_img: image, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
+      this.setState({
+        image: res.data.image,
+      })
+    } catch (err) {
+      console.log(err)
+    }
+
+  }
+
+
+  //When creating options, get id and clothes_type
+  //post should send id
+  //input for image, input for color, select for fabric, select for clothes, user hard code
+
+
+  populateSelect = () => {
+    const { fabrics, types } = this.state
+    let fabOpts = [];
+    let typeOpts = [];
+
+    for (let i = 0; i < fabrics.length; i++) {
+      fabOpts.push(<option value={i + 1} key={fabrics[i]}>{fabrics[i]}</option>);
+    }
+    for (let i = 0; i < types.length; i++) {
+      typeOpts.push(<option value={i + 1} key={types[i]}>{types[i]}</option>);
+    }
+
+    this.setState({
+      fabOptions: fabOpts,
+      fabChoice: `${fabOpts[0].props.value}`,
+      typeOptions: typeOpts,
+      typeChoice: `${typeOpts[0].props.value}`
+    })
+  }
+
+  render() {
+    let { fabOptions, typeOptions } = this.state;
+
+    return (
+      <div>
+        <p>Add an item</p>
+        <form onSubmit={this.handleSubmit}>
+          <input type="file" onChange={this.handleFileInput} />
+
+          <input type='text' name='colorChoice' onChange={this.handleInput} />
+
+          <select name='fabChoice' onChange={this.handleInput}>
+            {fabOptions}
+          </select>
+
+          <select name='typeChoice' onChange={this.handleInput}>
+            {typeOptions}
+          </select>
+
+          <input type='submit' value='upload' />
+        </form>
+      </div>
+    )
+
+  }
 }
 
-handleFileInput = async (event) => {
-   this.setState({
-     imageFile: event.target.files[0],
-   })
-   const allImages = await axios.get('http://localhost:3001/images/all')
-   const allImagesData = allImages.data.payload
-   this.setState({
-     imgId: allImagesData[allImagesData.length - 1].id + 1
-   })
-   let reader = new FileReader();
-   reader.onloadend = () => {
-     this.setState({
-       imagePreviewUrl: reader.result
-     });
-   }
-   reader.readAsDataURL(this.state.imageFile)
- }
-
-render () {
-   let { imagePreviewUrl } = this.state;
-
-}
+export default Item;

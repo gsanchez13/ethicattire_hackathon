@@ -13,6 +13,8 @@ import Cotton from "./Components/FabricItems/Cotton"
 import Linen from "./Components/FabricItems/Linen"
 import Silk from "./Components/FabricItems/Silk"
 import Polyester from "./Components/FabricItems/Polyester"
+import ClothingItem from "./Components/ClothingItem";
+
 class App extends React.Component {
   state = {
     user: ""
@@ -34,6 +36,7 @@ class App extends React.Component {
             <Route exact path="/Linen" component={Linen} />
             <Route exact path="/Polyester" component={Polyester} />
             <Route exact path="/Silk" component={Silk} />
+            <Route exact path={`/closet/user/:userId/clothes/:clothesId`} component={ClothingItem} />
           </Switch>
       </div>
     );

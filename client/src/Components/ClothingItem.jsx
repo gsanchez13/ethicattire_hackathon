@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from "axios";
+import { Switch, Route, withRouter, Link } from 'react-router-dom';
 
 
 class ClothingItem extends Component {
