@@ -3,7 +3,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const multer = require ('multer');
-const cors = require("cors");
+
+const cors = require('cors');
+
 
 const storage = multer.diskStorage({
    destination: (req, file, cb) => {
@@ -24,12 +26,14 @@ const usersRouter = require('./routes/users');
 const fabricsRouter = require('./routes/fabrics')
 const app = express();
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
+
 
 app.use('/items', itemsRouter);
 app.use('/users', usersRouter);
