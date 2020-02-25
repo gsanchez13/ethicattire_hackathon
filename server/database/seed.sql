@@ -160,7 +160,4 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',7, 6, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',8, 9, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',9, 7, 1, 'blue');
-<<<<<<< HEAD
-=======
 
->>>>>>> 2a1b9c82092c78c5c4bba532c3a2e4c700fe5742
