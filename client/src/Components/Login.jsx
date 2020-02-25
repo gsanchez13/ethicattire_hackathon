@@ -1,9 +1,7 @@
 import React from 'react';
 import { Switch, Route, withRouter, Link } from 'react-router-dom';
-import Header from "./Header";
-import About from "./About";
+import LoginAbout from './LoginAbout';
 
-import Shops from "./Shops";
 
 const Login = () => {
     return (
@@ -19,14 +17,17 @@ const Login = () => {
                     <p className="inputCaption">Password: </p>
                     <input className="inputField" type="password" placeholder=" ***********" />
                     <br></br>
-                <input type = 'button' value = 'Log In'/>
-                
+                    <Link to="/user"><button id="createButton">Login</button></Link>
+
                 </div>
-                
-                </form>
-         
+
+            </form>
+
+            <Switch>
+                <Route path="/user" render={LoginAbout} />
+            </Switch>
         </div>
-    );
+    )
 }
 
 export default Login;
