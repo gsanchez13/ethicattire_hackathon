@@ -161,3 +161,4 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
             ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',9, 7, 1, 'blue');
 
+
