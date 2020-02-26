@@ -1,0 +1,29 @@
+.main{
+    padding-top: 10px;
+    text-align: left;
+}
+
+.ShopsHeading{
+    font-family: 'Questrial';
+    color:blue;
+}
+
+p, h2{
+    font-family: 'Asap' ;
+}
+
+a{
+    font-family: 'Asap' ;
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    border: 3px solid black;
+    width:150px;
+
+}

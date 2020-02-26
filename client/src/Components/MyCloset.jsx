@@ -4,7 +4,7 @@ import axios from "axios";
 import GetItems from "./GetItems";
 import { Switch, Route, withRouter, Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
-
+import ItemUpload from './ItemUpload'
 
 class MyCloset extends React.Component {
     constructor() {
@@ -51,7 +51,8 @@ class MyCloset extends React.Component {
             <div>
                 <Header />
                 <ClosetScore />
-                <div id="clothingCheckList" className="componentHeaderDiv">
+                <ItemUpload />
+                <div className="componentHeaderDiv">
                     <h2 className="componentHeaderTag">Clothing Checklist</h2>
                 </div>
                 <div id="myClosetContentDiv">
