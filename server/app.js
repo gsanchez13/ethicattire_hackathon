@@ -39,7 +39,7 @@ app.use('/fabrics', fabricsRouter)
 app.post('/upload', upload.single ("image"), (req,res,next) => {
 
     
-   let imageUrl = "http://localhost:3001/" + req.file.path.replace('public/', '')
+   let imageUrl = "http://localhost:3000/" + req.file.path.replace('public/', '')
    res.json({
        imageUrl: imageUrl,
        message: "file uploaded"

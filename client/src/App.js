@@ -14,6 +14,7 @@ import Linen from "./Components/FabricItems/Linen"
 import Silk from "./Components/FabricItems/Silk"
 import Polyester from "./Components/FabricItems/Polyester"
 import ClothingItem from "./Components/ClothingItem";
+import Info from "./Components/Info"
 
 class App extends React.Component {
   state = {
@@ -29,6 +30,7 @@ class App extends React.Component {
             <Route exact path="/fabrics" component={Fabrics} />
             <Route exact path="/myCloset" component={MyCloset} />
             <Route exact path="/shops" component={Shops} />
+            <Route exact path="/info" component={Info} />
             <Route exact path="/mission" component={Mission} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/contact" component={Contact} />

@@ -46,17 +46,20 @@ class Item extends React.Component {
     })
   }
 
+  handleFileInput = async (event) => {
+    this.setState({
+      image: event.target.files[0],
+    })
+  }
+
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { image, fabChoice, typeChoice, colorChoice } = this.state;
+    const { fabChoice, typeChoice, colorChoice } = this.state;
     const data = new FormData();
     data.append('image', this.state.image);
     try {
-      const res = await axios.post('http://localhost:3000/items', data);
-      const post = axios.post(`http://localhost:3000/items`, { item_img: image, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
-      this.setState({
-        image: res.data.image,
-      })
+      const res = await axios.post('http://localhost:3000/upload', data);
+      const post = axios.post(`http://localhost:3000/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
     } catch (err) {
       console.log(err)
     }
@@ -98,7 +101,7 @@ class Item extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input type="file" onChange={this.handleFileInput} />
 
-          <input type='text' name='colorChoice' onChange={this.handleInput} />
+          <input type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} />
 
           <select name='fabChoice' onChange={this.handleInput}>
             {fabOptions}

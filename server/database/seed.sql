@@ -152,12 +152,13 @@ INSERT INTO clothes (clothes_type)
 
 INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 4, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',2, 1, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',3, 2, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',4, 5, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',5, 1, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',6, 5, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',7, 6, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',8, 9, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',9, 7, 1, 'blue');
+            ('https://www.growingbolder.com/wp-content/uploads/2018/11/gb-logo-mens-blue-t-shirt-back-v3.jpg',2, 1, 1, 'blue'),
+            ('https://dk69ohdbihujq.cloudfront.net/image/catalog/2019/clothing/43068/2-sidel-embroidery-knitwear-sweater-blue-jessica-buurman-women-street-style-clothing.png',3, 2, 1, 'blue'),
+            ('https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/5/2018/11/Screen-Shot-2018-11-21-at-14.39.41-356x500.png',4, 5, 1, 'blue'),
+            ('https://www.sunspel.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtsh0001-budx_3.jpg',5, 1, 1, 'blue'),
+            ('https://choosmeinstyle.com/wp-content/uploads/2019/01/blue-trousers-6901.jpg',6, 5, 1, 'blue'),
+            ('https://www.gentlemansguru.com/wp-content/uploads/2018/08/Mens-Royal-Blue-Floral-Blazer-from-Gentlemansguru.com_-800x800.jpg',7, 6, 1, 'blue'),
+            ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
+            ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',9, 7, 1, 'blue');
+
 
