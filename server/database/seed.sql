@@ -152,10 +152,10 @@ INSERT INTO clothes (clothes_type)
 
 INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 4, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',2, 1, 1, 'blue'),
+            ('https://pixel.nymag.com/imgs/daily/strategist/2018/10/05/eco-friendly-t-shirts/loomstate.w600.h396.2x.jpg',2, 1, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',3, 2, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',4, 5, 1, 'blue'),
-            ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',5, 1, 1, 'blue'),
+            ('https://pixel.nymag.com/imgs/daily/strategist/2018/10/05/eco-friendly-t-shirts/loomstate.w600.h396.2x.jpg',5, 1, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',6, 5, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',7, 6, 1, 'blue'),
             ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',8, 9, 1, 'blue'),

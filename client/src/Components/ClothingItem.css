@@ -1,0 +1,35 @@
+.clothes-image {
+    height: 60%;
+    width: 80%
+}
+.clothing-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    padding: auto;
+    margin: auto;
+}
+.clothing-item {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    padding: 2px 16px;
+    width: 20%;
+    height: 60vh;
+    margin: 20px;
+  }
+  .green-clothing-item {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 8px 10px 0 rgb(119, 204, 119);
+    transition: 0.3s;
+    padding: 2px 16px;
+    width: 20%;
+    height: 60vh;
+    margin: 20px;
+  }
+  /* On mouse-over, add a deeper shadow */
+  .clothing-item:hover {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
