@@ -20,10 +20,13 @@ class MyCloset extends React.Component {
             console.log(this.state.data)
 
             try {
-                let clothes = await axios.get(`http://localhost:3000/items/`);
+                let clothes = await axios.get(`http://localhost:3000/items/types`);
                 console.log("clothes:", clothes);
                 console.log("clothes.data:", clothes.data)
                 console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
+                this.setState({
+                    data: clothes.data.payload
+                })
                 let newData = [...this.state.data];
                 console.log("newData:", newData);
                 clothes.data.payload.map(element => {
@@ -31,7 +34,7 @@ class MyCloset extends React.Component {
                 });
 
                 this.setState({
-                    data: newData,
+                    
                     clothesId: clothes.data.payload[0].id
                 });
                 console.log("state:", this.state);
@@ -43,16 +46,37 @@ class MyCloset extends React.Component {
 
     render() {
         const { user, data, clothesId } = this.state;
+        console.log("render method data:", data);
         return (
             <div>
                 <Header />
                 <ClosetScore />
-                <div className="componentHeaderDiv">
+                <div id="clothingCheckList" className="componentHeaderDiv">
                     <h2 className="componentHeaderTag">Clothing Checklist</h2>
                 </div>
                 <div id="myClosetContentDiv">
-                {this.state.data ? (<Link to={`/closet/user/${user}/clothes/${clothesId}`}><GetItems data={data} /></Link>) : null}
-                    
+                    <div className="myClosetClothes">
+                        {
+                        // this.state.data 
+                        // ? (
+                        //     <Link to={`/closet/user/${user}/clothes/${clothesId}`}>
+                        //         <GetItems data={data} />
+                        //    </Link>
+                        // ) 
+                        // : null
+                        }
+                        {
+                            data.map(element => {
+                                return (
+                                    <div className="FabricTypeDiv">
+                                            
+                                            <Link to={`/closet/user/${user}/clothes/${clothesId}`}><p>{element.clothes_type}</p></Link>
+
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         );
