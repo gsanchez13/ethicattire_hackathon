@@ -101,7 +101,7 @@ class Item extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input type="file" onChange={this.handleFileInput} />
 
-          <input type='text' name='colorChoice' onChange={this.handleInput} />
+          <input type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} />
 
           <select name='fabChoice' onChange={this.handleInput}>
             {fabOptions}
