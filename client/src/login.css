@@ -1,0 +1,25 @@
+#login-box{
+    width: 30%;
+    height: 60%;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #login-title{
+    font-family: 'Questrial';
+    color:blue;
+  }
+
+  .input{
+    color: black;
+    font-family: 'Asap' ;
+  }
+
+  #button{
+    margin-right: 60px;
+  }
+  .name-of-app a{
+    font-family: 'Questrial';
+    text-decoration: none;
+  }

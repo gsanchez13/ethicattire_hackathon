@@ -1,30 +1,48 @@
 import React from 'react';
 import { Switch, Route, withRouter, Link } from 'react-router-dom';
-import LoginAbout from './LoginAbout';
+import '../login.css';
+import MyCloset from './MyCloset';
 
 
 const Login = () => {
     return (
         <div>
-            <div className="componentHeaderDiv">
-                <h2 className="componentHeaderTag">Login</h2>
+          
+            <div id="f">
+                <Link to="/myCloset" >
+                    <h2 id="nameOfAppHeaderTag">Ethic Attire</h2>
+                </Link>
+         
+            </div>
+            <div className="">
+                <h2 className="login-title">Login</h2>
             </div>
             <form>
-                <div id="myClosetContentDiv">
-                    <p className="inputCaption">Username: </p>
+                <div id="login-box">
                     <input className="inputField" type="text" placeholder=" Username" />
-
-                    <p className="inputCaption">Password: </p>
                     <input className="inputField" type="password" placeholder=" ***********" />
                     <br></br>
-                    <Link to="/user"><button id="createButton">Login</button></Link>
+                    <br></br>
+                    <Link to="/myCloset" id='button'><button id="createButton">Log In</button></Link>
+
+
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br><br></br>
+                    <br></br>
+                    <p>No account? Sign up here! <button id="createButton">Sign Up</button></p>
 
                 </div>
 
             </form>
 
             <Switch>
-                <Route path="/user" render={LoginAbout} />
+                <Route path="/mycloset" render={MyCloset} />
             </Switch>
         </div>
     )
