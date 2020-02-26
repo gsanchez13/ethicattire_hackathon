@@ -22,7 +22,8 @@ CREATE TABLE fabrics (
 
 CREATE TABLE clothes (
    id SERIAL PRIMARY KEY,
-   clothes_type VARCHAR
+   clothes_type VARCHAR,
+   amount VARCHAR
 );
 
 CREATE TABLE items (
@@ -139,16 +140,17 @@ INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img)
                                       durable. Most commonly, polyester-spandex blends are used in activewear as spandex is stretchy and 
                                       can retain its original shape, and polyester – durable.', '');
 
-INSERT INTO clothes (clothes_type) 
-   VALUES   ('t-shirts'),
-            ('sweater'),
-            ('button down'),
-            ('jeans'),
-            ('trousers'),
-            ('blazer'),
-            ('coat'),
-            ('sneakers'),
-            ('dress shoes');
+INSERT INTO clothes (clothes_type, amount) 
+   VALUES   ('t-shirts', 4),
+            ('sweater', 4),
+            ('button down', 4),
+            ('jeans', 3),
+            ('trousers', 4),
+            ('blazer', 1),
+            ('coat', 2),
+            ('sneakers', 3),
+            ('dress shoes', 1),
+            ('boots', 2);
 
 INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 4, 1, 'blue'),
@@ -160,5 +162,4 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://www.gentlemansguru.com/wp-content/uploads/2018/08/Mens-Royal-Blue-Floral-Blazer-from-Gentlemansguru.com_-800x800.jpg',7, 6, 1, 'blue'),
             ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
             ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',9, 7, 1, 'blue');
-
 
