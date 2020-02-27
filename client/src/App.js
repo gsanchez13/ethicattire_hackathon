@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Nav from "./Components/Nav";
-import About from "./Components/About";
+
 import Fabrics from "./Components/Fabrics";
 import MyCloset from "./Components/MyCloset";
 import Shops from "./Components/Shops";
@@ -27,7 +27,7 @@ class App extends React.Component {
         <Nav/>
           <Switch>
             <Route exact path="/" component={Login}/>
-            <Route exact path="/about" component={About} />
+            
             <Route exact path="/fabrics" component={Fabrics} />
             <Route exact path="/myCloset" component={MyCloset} />
             <Route exact path="/shops" component={Shops} />
