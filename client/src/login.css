@@ -8,7 +8,6 @@
 
   #login-title{
     font-family: 'Questrial';
-    color:blue;
   }
 
   .input{
@@ -16,10 +15,12 @@
     font-family: 'Asap' ;
   }
 
-  #button{
-    margin-right: 60px;
-  }
   .name-of-app a{
     font-family: 'Questrial';
     text-decoration: none;
+  }
+  ::placeholder {
+    color: black;
+    margin-left: 40px;
+    /* margin-right:auto; */
   }

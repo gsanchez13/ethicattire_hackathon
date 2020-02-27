@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./Nav";
+import "../About.css";
 
 const About = () => {
     return(
-        <div>
-            {/* If logged in, then show <Header />, else, don't */}
-            <Header />
+        <div id="aboutContainer">
             <h1> About </h1>
             <p>Welcome to Ethic Attire!</p>
         </div>

@@ -22,7 +22,8 @@ CREATE TABLE fabrics (
 
 CREATE TABLE clothes (
    id SERIAL PRIMARY KEY,
-   clothes_type VARCHAR
+   clothes_type VARCHAR,
+   amount VARCHAR
 );
 
 CREATE TABLE items (
@@ -39,7 +40,23 @@ INSERT INTO users (username, password, style)
    VALUES ('sharr', 'east', false);
 
 INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img) 
-   VALUES   ('Cotton', 1, 'Cotton is one of the most commonly used fabrics. This natural fibre is light and breathable but 
+   VALUES('Hemp', 1, 'Hemp clothing is made from a natural fiber with many amazing advantages, both ecological 
+                      and personal.  Hemp actually has a very long history of being used as a fibre, in fact, 
+                      it has been cultivated for thousands of years and on almost every continent. It has been 
+                      used in clothing, ropes and sails. 
+                      Hemp is a type of “bast fibre” which means it’s one of a number of natural fibres derived 
+                      from the stems of plants such as flax, jute and stinging nettle. The fabric has various 
+                      natural advantages such as keeping you warm in winter, cool in summer and even protecting you 
+                      from UV rays.
+                      The fibre produced from pure hemp is similar to linen in texture. It can also be 
+                      blended with other natural fibres to create fabrics with the durability of hemp and the 
+                      softness of cotton or bamboo.
+                      Not only is hemp gentle on the earth, it also requires very little water, especially when compared 
+                      to cotton, which, according to Slate uses “about 50 percent more water per season than hemp.” But 
+                      that’s not all. According to the same article, “When you add processing into the equation, cotton 
+                      uses more than four times as much water as hemp.”', 'https://cdn.pixabay.com/photo/2017/11/03/19/06/herb-2915337_1280.jpg'),  
+   
+            ('Cotton', 1, 'Cotton is one of the most commonly used fabrics. This natural fibre is light and breathable but 
                            growing cotton can be problematic: conventional cotton is one of the thirstiest and most 
                            chemical-intensive crops to grow. It requires a lot of pesticides and, as a result, has a negative 
                            impact on the planet, and the people who grow it. 
@@ -97,7 +114,7 @@ INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img)
                              Blends well with other fabrics
                              Creates form fitting and highly durable garments
                              Can be a cause of contact dermatitis
-                             Non-biodegradeable', ''),
+                             Non-biodegradeable', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/leggings-1562164568.png?crop=1.00xw:1.00xh;0,0&resize=980:*'),
             ('Cashmere', 0, 'Cashmere doesn’t come from sheep, but from goats. The breed of goat is found 
                              between Mongolia, Southwest China, Iran, Tibet, Northern India and Afghanistan.
                              These goats have very little fat to protect them in the winter from the cold arid plains, so they 
@@ -118,10 +135,7 @@ INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img)
                              mouths to feed and overpopulation is killing these lands: once green and unspoilt, these regions 
                              are quickly becoming deserts. This does not only affect these specific regions but creates an 
                              ecological imbalance for the planet.', 'https://cdn.pixabay.com/photo/2019/07/28/08/20/billy-goat-4368163_1280.jpg'),
-            ('Cotton-spandex', 0, 'The fabric is nearly all cotton, it will have all the comfort and breathability of cotton.  
-                                   The spandex (LYCRA®) will not noticeably affect this since typically the blends only use 2% 
-                                   to 5% spandex, which acts to control the shape of the fabric so it doesn’t wrinkle or stretch.', 'https://cdn.pixabay.com/photo/2015/09/05/21/57/girl-925635_1280.jpg'),
-            ('Polyester-cotton-rayon', 0, '', ''),
+
             ('Cotton-Polyester', 0, 'A fabric made from a poly cotton blend combines the strengths of the two fibers. Poly 
                                      cotton garments are breathable, tear-resistant, and can be fashioned into abrasion-resistant
                                      fabrics, like canvas. While not as inexpensive as pure polyester, poly cotton blends do 
@@ -133,22 +147,20 @@ INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img)
                                      preference. If employees work indoors around machinery, the tear-resistance of poly cotton 
                                      may be favorable. If the work is in an outdoor setting, particularly in hot climates, 100% 
                                      cotton fabric could be the better choice. Before deciding, make sure to take all 
-                                     environmental factors into consideration.', ''),
-            ('Polyester-pandex', 0, 'Spandex, also known as elastane or lycra, is a synthetic fiber best known for its elasticity. 
-                                      When combined with cotton, spandex makes a perfect fabric for clothing that is soft to touch and 
-                                      durable. Most commonly, polyester-spandex blends are used in activewear as spandex is stretchy and 
-                                      can retain its original shape, and polyester – durable.', '');
+                                     environmental factors into consideration.', '');
+            
 
-INSERT INTO clothes (clothes_type) 
-   VALUES   ('t-shirts'),
-            ('sweater'),
-            ('button down'),
-            ('jeans'),
-            ('trousers'),
-            ('blazer'),
-            ('coat'),
-            ('sneakers'),
-            ('dress shoes');
+INSERT INTO clothes (clothes_type, amount) 
+   VALUES   ('t-shirts', 4),
+            ('sweater', 4),
+            ('button down', 4),
+            ('jeans', 3),
+            ('trousers', 4),
+            ('blazer', 1),
+            ('coat', 2),
+            ('sneakers', 3),
+            ('dress shoes', 1),
+            ('boots', 2);
 
 INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 4, 1, 'blue'),
@@ -159,6 +171,5 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://choosmeinstyle.com/wp-content/uploads/2019/01/blue-trousers-6901.jpg',6, 5, 1, 'blue'),
             ('https://www.gentlemansguru.com/wp-content/uploads/2018/08/Mens-Royal-Blue-Floral-Blazer-from-Gentlemansguru.com_-800x800.jpg',7, 6, 1, 'blue'),
             ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
-            ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',9, 7, 1, 'blue');
-
+            ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',8, 7, 1, 'blue');
 
