@@ -97,3 +97,7 @@
 #myClosetContiner {
   height: 1030px;
 }
+
+a:visited {
+  color: olive;
+}

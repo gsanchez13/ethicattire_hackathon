@@ -77,6 +77,8 @@ class Item extends React.Component {
     const { fabrics, types } = this.state
     let fabOpts = [];
     let typeOpts = [];
+    fabOpts.push(<option value={''} key={''}>Choose a fabric</option>)
+    typeOpts.push(<option value={''} key={''}>Choose a Clothing Type</option>)
 
     for (let i = 0; i < fabrics.length; i++) {
       fabOpts.push(<option value={i + 1} key={fabrics[i]}>{fabrics[i]}</option>);
@@ -100,19 +102,19 @@ class Item extends React.Component {
       <div>
         <p>Add an item</p>
         <form onSubmit={this.handleSubmit}>
-          <input className="ItemUploadInputs" type="file" onChange={this.handleFileInput} />
+          <input className="ItemUploadInputs" type="file" onChange={this.handleFileInput} required/>
 
           <input id="colorChoiceInput" className="ItemUploadInputs" type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} />
 
-          <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput}>
+          <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput} required>
             {fabOptions}
           </select>
 
-          <select className="ItemUploadInputs" name='typeChoice' onChange={this.handleInput}>
+          <select className="ItemUploadInputs" name='typeChoice' onChange={this.handleInput} required>
             {typeOptions}
           </select>
 
-          <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' />
+          <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' required/>
         </form>
       </div>
     )
