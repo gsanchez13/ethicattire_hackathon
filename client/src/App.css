@@ -2,6 +2,9 @@
   text-align: center;
   background-color: #EEEDED;
 }
+html, body, #app, #app>div {
+  height: 100%
+}
 
 #headerComponentContainer {
   border: solid 1px;

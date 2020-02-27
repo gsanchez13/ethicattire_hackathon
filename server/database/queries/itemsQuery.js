@@ -32,11 +32,17 @@ const getAllClothingTypes = async () => {
     const allClothing = await db.any(GETALLCLOTHINGTYPESQUERY);
     return allClothing;
 }
+const getSusItemsCount = async (user_id) => {
+    const SELECTCOUNTQUERY = `SELECT COUNT(*) FROM items INNER JOIN fabrics ON items.fabric_id = fabrics.id WHERE (items.user_id = $1) AND (score > 0)`
+    const susItemsCount = await db.any(SELECTCOUNTQUERY, [user_id])
+    return susItemsCount;
+}
 
 module.exports = {
     getAllItems,
     postNewItem,
     getAllItemsForFabric,
     getAllClothingTypes,
-    getAllItemsByTypeAndUser
+    getAllItemsByTypeAndUser,
+    getSusItemsCount
 };
