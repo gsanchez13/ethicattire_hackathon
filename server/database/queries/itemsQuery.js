@@ -16,7 +16,8 @@ const getAllItemsByTypeAndUser = async (user_id, clothes_id) => {
         JSON_BUILD_OBJECT(
         'fabric', fabric_type,
         'img', item_img,
-        'color', color
+        'color', color,
+        'score', score
         )
        ) item
     FROM items
@@ -25,7 +26,7 @@ const getAllItemsByTypeAndUser = async (user_id, clothes_id) => {
     INNER JOIN users ON items.user_id = users.id
     WHERE items.user_id = $1 AND items.clothes_id = $2
     GROUP BY username, amount, clothes_type;`
-    const allItems = await db.any(GETITEMSBYTYPEANDUSERQUERY, [user_id, clothes_id]);
+    const allItems = await db.one(GETITEMSBYTYPEANDUSERQUERY, [user_id, clothes_id]);
     return allItems;
 }
 const getAllItemsForFabric = async (fabric_id) => {
