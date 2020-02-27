@@ -43,13 +43,7 @@ class MyCloset extends React.Component {
         const { user, data, clothesId } = this.state;
         console.log("render method data:", data);
         return (
-<<<<<<< HEAD
-            <div>
-               
-=======
             <div id="myClosetContiner">
-                <Header />
->>>>>>> c7d1eef0fc9484c082a94989398eb17958848d3b
                 <ClosetScore />
                 <ItemUpload />
                 <div className="componentHeaderDiv">
