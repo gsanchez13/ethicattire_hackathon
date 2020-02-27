@@ -1,12 +1,13 @@
 import React from "react";
-import Header from "./Header";
+
 import "../shops.css";
 
 const Shops = () => {
   return (
     <>
-      <Header />
+     
       <div className="main">
+      <h1 className="ShopsHeading">Shops</h1>
         <img src="https://lsco.scene7.com/is/image/lsco/levis/clothing/295020142-front-pdp.jpg?$thumb_desktop$"></img>{" "}
         <br />
         <a href="https://www.levi.com/US/en_US/" target="_blank">
