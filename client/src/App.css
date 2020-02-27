@@ -3,6 +3,51 @@
   background-color: rgba(189, 213, 224, 0.281);
 }
 
+#headerComponentContainer {	
+  border: solid 1px;	
+  display: inline-block;	
+  width: 100%;	
+}	
+
+#nameOfAppDiv {	
+  text-align: left;	
+  height: 1%;	
+  width: 20%;	
+  margin-top: 1%;	
+  margin-bottom: 1%;	
+  display: inline-block;	
+}	
+
+#nameOfAppHeaderTag {	
+  text-align: center;	
+}	
+
+#navbarContainer {	
+  border: solid 1px;	
+  display: inline-block;	
+  width: 70%;	
+  height: 50%;	
+  margin-left: 2%	
+}	
+
+.HeaderNavElements {	
+  display: inline-block;	
+  text-align: center;	
+  width: 15%;	
+}	
+
+#ClothingChecklistHeaderTag {	
+  text-align: center;  	
+}	
+
+.componentHeaderDiv {	
+  width: 30%;	
+  margin-top: 1%;	
+  margin-right: auto;	
+  margin-left: auto;	
+  border: solid 1px;	
+}	
+
 #myClosetContentDiv {
   width: 30%;
   height: 60%;
