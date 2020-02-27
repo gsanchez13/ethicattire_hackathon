@@ -11,11 +11,20 @@ const postNewItem = async (item_img, fabric_id, clothes_id, user_id, color) => {
     return newItem;
 };
 const getAllItemsByTypeAndUser = async (user_id, clothes_id) => {
-    const GETITEMSBYTYPEANDUSERQUERY = `SELECT * FROM items
+    const GETITEMSBYTYPEANDUSERQUERY = `SELECT username, amount, clothes_type, 
+    ARRAY_AGG(
+        JSON_BUILD_OBJECT(
+        'fabric', fabric_type,
+        'img', item_img,
+        'color', color
+        )
+       ) item
+    FROM items
     INNER JOIN fabrics ON items.fabric_id = fabrics.id
     INNER JOIN clothes ON items.clothes_id = clothes.id
     INNER JOIN users ON items.user_id = users.id
-    WHERE items.user_id = $1 AND items.clothes_id = $2`
+    WHERE items.user_id = $1 AND items.clothes_id = $2
+    GROUP BY username, amount, clothes_type;`
     const allItems = await db.any(GETITEMSBYTYPEANDUSERQUERY, [user_id, clothes_id]);
     return allItems;
 }
