@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./Header";
+
 import "../shops.css";
 
 const Info = () => {
   return (
     <div className="main">
       {/* If logged in, then show <Header />, else, don't */}
-      <Header />
-      <h1 className="ShopsHeading">Shops</h1>
+  
+      <h1 className="ShopsHeading">Info</h1>
       <h2>What is ethical or sustainable fashion?</h2>
       <p>
         It takes into account the full lifecycle of the product — from the

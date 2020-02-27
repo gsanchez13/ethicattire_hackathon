@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Cotton = () => {
   return (
     <div className="FabricTitle">
       <h1>Cotton Care</h1>
-      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2014/07/31/00/30/laundry-405878_1280.jpg"></img>
+      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2014/07/31/00/30/laundry-405878_1280.jpg" alt="cotton"></img>
       <p className="FabricDesc">
         It is difficult to give guidance on washing cotton as there are so many
         types of cotton fabric available and so many uses for it. To be safe you

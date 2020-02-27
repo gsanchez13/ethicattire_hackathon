@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Linen = () => {
   return (
     <div className="FabricTitle">
       <h1>Linen Care</h1>
-      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2017/08/07/20/10/woven-2607344_1280.jpg"></img>
+      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2017/08/07/20/10/woven-2607344_1280.jpg" alt="linen"></img>
       <p className="FabricDesc">
         Let’s just start by saying that caring for linen items is simple and
         rather straightforward — high-quality linen fabric is sturdy and durable

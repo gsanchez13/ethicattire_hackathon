@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
-import Header from './Header';
+
 import './ClothingItem.css';
 class ClothingItem extends Component {
     constructor() {
@@ -66,7 +66,6 @@ class ClothingItem extends Component {
         if(amount <= clothes.length) {
             return (
                 <div>
-                    <Header /> 
                     <h1>User</h1>
                     <div className="clothing-container">
                         {itemsCards}

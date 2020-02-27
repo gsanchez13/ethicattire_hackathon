@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, withRouter } from 'react-router-dom';
-import Header from "./Components/Header";
+import { Switch, Route } from 'react-router-dom';
+import Nav from "./Components/Nav";
 import About from "./Components/About";
 import Fabrics from "./Components/Fabrics";
 import MyCloset from "./Components/MyCloset";
@@ -24,15 +24,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Nav/>
           <Switch>
-            <Route exact path="/" component={MyCloset}/>
+            <Route exact path="/" component={Login}/>
             <Route exact path="/about" component={About} />
             <Route exact path="/fabrics" component={Fabrics} />
             <Route exact path="/myCloset" component={MyCloset} />
             <Route exact path="/shops" component={Shops} />
             <Route exact path="/info" component={Info} />
             <Route exact path="/mission" component={Mission} />
-            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/login" component={Login} /> */}
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/Cotton" component={Cotton} />
             <Route exact path="/Linen" component={Linen} />
