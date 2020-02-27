@@ -5,13 +5,13 @@ import '../closetScore.css';
 
 
 const ClosetScore = (props) => {
-    let currentItems = 16;
-    let totalItems = 32
+    let currentItems = props.susItems;
+    let totalItems = props.totalItems
     let percentage = (currentItems / totalItems) * 100;
     return (
         <example label="Default" >
-            <CircularProgressbar className = 'score' value={percentage} text={`${currentItems}/${totalItems}`} />
+            <CircularProgressbar className='score' value={percentage} text={`${currentItems}/${totalItems}`} />
         </example>
-    )
+    ) 
 }
 export default ClosetScore;
