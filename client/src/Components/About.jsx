@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Nav";
 import "../About.css";
 
 const About = () => {

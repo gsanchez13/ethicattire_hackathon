@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import { Switch, Route, withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './ClothingItem.css';
 class ClothingItem extends Component {
@@ -9,7 +9,9 @@ class ClothingItem extends Component {
         this.state = {
             user_id: "",
             clothing_id: "",
-            clothes: []
+            clothes: [],
+            article: "",
+            sugAmount: ""
         }
     }
     componentDidMount = async () => {
@@ -30,12 +32,15 @@ class ClothingItem extends Component {
         let usersItems = await this.getUsersItems(userId, clothesId);
         this.setState({
             user_id: userId,
+            username: usersItems.username,
             clothing_id: clothesId,
-            clothes: usersItems,
+            clothes: usersItems.item,
+            article: usersItems.clothes_type,
+            sugAmount: usersItems.amount
         })
     }
     render() {
-        const { clothes } = this.state;
+        const { clothes, article, username, amount } = this.state;
         const determineClassName = (score) => {
             if(score >= 1){
                 return "green-clothing-item";
@@ -44,28 +49,37 @@ class ClothingItem extends Component {
                 return "clothing-item";
             }
         }
+
         let itemsCards = clothes.map((item) => {
             return (
                 <div className={determineClassName(item.score)} type={item.id}>
-                    <h3>{item.username}'s {item.clothes_type}</h3>
-                    <img src={item.item_img} alt={item.clothes_type} className="clothes-image" />
+                    <h3>{username}'s {article}</h3>
+                    <img src={item.img} alt={article} className="clothes-image" />
                     <p><b>Fabric:</b> {" "}
-                    <Link to={`/${item.fabric_type}`}>
-                        {item.fabric_type}
+                    <Link to={`/${item.fabric}`}>
+                        {item.fabric}
                     </Link>
                     </p>
                 </div>
             )
         })
-        return (
-            <div>
-              
-                <h1>User</h1>
-                <div className="clothing-container">
-                    {itemsCards}
+        if(amount <= clothes.length) {
+            return (
+                <div>
+                    <h1>User</h1>
+                    <div className="clothing-container">
+                        {itemsCards}
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
+        else{
+            return (
+                <div>
+                    <h1>not enough items</h1>
+                </div>
+            )
+        }
     }
 }
 

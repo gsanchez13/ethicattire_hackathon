@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Polyester = () => {
   return (
     <div className="FabricTitle">
       <h1>Polyester Care</h1>
 
-      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2018/10/16/11/35/textile-3751276_1280.jpg"></img>
+      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2018/10/16/11/35/textile-3751276_1280.jpg" alt="polyester"></img>
 
       <p className="FabricDesc">
         Polyester fabrics are strong, resilient, wrinkle-resistant, colorfast,

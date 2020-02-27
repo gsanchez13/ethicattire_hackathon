@@ -147,7 +147,7 @@ INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img)
                                      preference. If employees work indoors around machinery, the tear-resistance of poly cotton 
                                      may be favorable. If the work is in an outdoor setting, particularly in hot climates, 100% 
                                      cotton fabric could be the better choice. Before deciding, make sure to take all 
-                                     environmental factors into consideration.', '');
+                                     environmental factors into consideration.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRiWX0kOj7GgrkfGjmEMvfNlvZeRIHZV5aQxP_9vhReSWB0LrJW');
             
 
 INSERT INTO clothes (clothes_type, amount) 

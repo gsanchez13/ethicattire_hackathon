@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
 import './ItemUpload.css';
 
 class Item extends React.Component {
