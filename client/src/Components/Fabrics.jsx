@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import '../fabric.css'
 
-import Header from "./Header";
+
 
 class Fabrics extends Component {
   constructor() {
@@ -35,10 +35,7 @@ class Fabrics extends Component {
     const { fabrics } = this.state;
     return (
       <div className="main">
-        <Header />
-        {/* <div className="componentHeaderDiv"> */}
-          
-        {/* </div> */}
+    
         
         
         <div className="fabrics">

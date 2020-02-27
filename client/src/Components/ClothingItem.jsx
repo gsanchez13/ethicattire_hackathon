@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Switch, Route, withRouter, Link } from 'react-router-dom';
-import Header from './Header';
+
 import './ClothingItem.css';
 class ClothingItem extends Component {
     constructor() {
@@ -59,7 +59,7 @@ class ClothingItem extends Component {
         })
         return (
             <div>
-                <Header />
+              
                 <h1>User</h1>
                 <div className="clothing-container">
                     {itemsCards}
