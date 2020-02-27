@@ -5,19 +5,19 @@ import GetItems from "./GetItems";
 import { Switch, Route, withRouter, Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
 import ItemUpload from './ItemUpload'
+import "../App.css";
 
 class MyCloset extends React.Component {
     constructor() {
         super();
         this.state = {
             user: '1',
-            data: [],
-            clothesId: ""
+            data: []
         }
     }
 
     async componentDidMount() {
-            console.log(this.state.data)
+            console.log(this.state.data);
 
             try {
                 let clothes = await axios.get(`http://localhost:3000/items/types`);
@@ -26,17 +26,13 @@ class MyCloset extends React.Component {
                 console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
                 this.setState({
                     data: clothes.data.payload
-                })
+                });
                 let newData = [...this.state.data];
                 console.log("newData:", newData);
                 clothes.data.payload.map(element => {
                     newData.push(element.item_type)
                 });
 
-                this.setState({
-                    
-                    clothesId: clothes.data.payload[0].id
-                });
                 console.log("state:", this.state);
 
             } catch (err) {
@@ -48,12 +44,12 @@ class MyCloset extends React.Component {
         const { user, data, clothesId } = this.state;
         console.log("render method data:", data);
         return (
-            <div>
+            <div id="myClosetContiner">
                 <Header />
                 <ClosetScore />
                 <ItemUpload />
                 <div className="componentHeaderDiv">
-                    <h2 className="componentHeaderTag">Clothing Checklist</h2>
+                    <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Clothing Checklist</h2>
                 </div>
                 <div id="myClosetContentDiv">
                     <div className="myClosetClothes">
@@ -69,10 +65,8 @@ class MyCloset extends React.Component {
                         {
                             data.map(element => {
                                 return (
-                                    <div className="FabricTypeDiv">
-                                            
-                                            <Link to={`/closet/user/${user}/clothes/${clothesId}`}><p>{element.clothes_type}</p></Link>
-
+                                    <div className="FabricTypeDiv"> 
+                                        <Link to={`/closet/user/${user}/clothes/${element.id}`}><p className="myClosetClothes">{element.clothes_type}</p></Link>
                                     </div>
                                 );
                             })

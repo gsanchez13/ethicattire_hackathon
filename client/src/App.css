@@ -38,6 +38,7 @@
 
 #ClothingChecklistHeaderTag {
   text-align: center;  
+  color: #6c006c;
 }
 
 .componentHeaderDiv {
@@ -54,11 +55,10 @@
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
-  /* border: solid 1px; */
 }
 
 .myClosetClothes {
-  /* border: solid 1px; */
+  color: #6c006c;
 }
 
 .myClosetClothes:hover {
@@ -92,4 +92,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-flow: column;
+}
+
+#myClosetContiner {
+  height: 1030px;
 }
