@@ -42,9 +42,9 @@ class Fabrics extends Component {
         <h1 className="FabricTitle">Fabrics</h1>
           {fabrics.map(e => {
             return (
-              <div className="FabricBox">
+              <div className="FabricBox" key={e.fabric_type}>
                 <Link to={e.fabric_type} className="FabricTitle"><h2>{e.fabric_type}</h2></Link>
-                <img className="FabricImg"src={e.fabric_img}></img>
+                <img className="FabricImg"src={e.fabric_img} alt={e.fabric_type}></img>
                 <p className="FabricDesc">{e.fabric_desc}</p>
               </div>
             );

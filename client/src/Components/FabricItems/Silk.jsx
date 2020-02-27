@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Silk = () => {
   return (
     <div className="FabricTitle">
       <h1>Silk Care</h1>
-      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2018/09/11/20/43/silk-3670576_1280.jpg"></img>
+      <img className="FabricImg" src="https://cdn.pixabay.com/photo/2018/09/11/20/43/silk-3670576_1280.jpg" alt="silk"></img>
 
       <p className="FabricDesc">
         Like our label says, when it comes to washing your silk leaving it to

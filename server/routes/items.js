@@ -47,13 +47,13 @@ router.get('/types', async (req, res, next) => {
   try {
     let allClothingTypes = await itemsQueries.getAllClothingTypes();
     res.status(200)
-    .json({
-      payload: allClothingTypes,
-      msg: "All clothing types retrieved.",
-      err: false
-    })
+      .json({
+        payload: allClothingTypes,
+        msg: "All clothing types retrieved.",
+        err: false
+      })
   }
-  catch(err) {
+  catch (err) {
     console.log(err)
     res.json({
       payload: null,
@@ -62,6 +62,25 @@ router.get('/types', async (req, res, next) => {
     })
   }
 });
+
+router.get('/count/:user_id', async (req, res, next) => {
+  try {
+    let itemCount = await itemsQueries.getSusItemsCount(req.params.user_id);
+    res.status(200).json({
+      payload: itemCount,
+      msg: "all sustainable clothing received",
+      err: false
+    })
+  } catch (err) {
+    console.log(err)
+    res.json({
+      payload: null,
+      msg: "All items not retrieved.",
+      err: true
+    })
+  }
+});
+
 router.get('/:fabricId', async (req, res, next) => {
   let fabric_id = req.params.fabricId;
   try {
@@ -83,8 +102,10 @@ router.get('/:fabricId', async (req, res, next) => {
   }
 });
 
-router.get('/user/:user_id/clothes/:clothes_id', async(req, res, next) => {
-  const {user_id, clothes_id} = req.params;
+
+
+router.get('/user/:user_id/clothes/:clothes_id', async (req, res, next) => {
+  const { user_id, clothes_id } = req.params;
   try {
     let usersClothing = await itemsQueries.getAllItemsByTypeAndUser(user_id, clothes_id);
     res.status(200)
@@ -94,7 +115,7 @@ router.get('/user/:user_id/clothes/:clothes_id', async(req, res, next) => {
         err: false
       })
   }
-  catch(err) {
+  catch (err) {
     console.log(err);
     res.json({
       payload: null,
