@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgba(189, 213, 224, 0.281);
+  background-color: #EEEDED;
 }
 
 #headerComponentContainer {
@@ -38,7 +38,7 @@
 
 #ClothingChecklistHeaderTag {
   text-align: center;  
-  color: #6c006c;
+  color: navy;
 }
 
 .componentHeaderDiv {
@@ -50,7 +50,7 @@
 }
 
 #myClosetContentDiv {
-  width: 20%;
+  width: 99%;
   height: 40px;
   margin-top: 50px;
   margin-right: auto;
@@ -58,7 +58,8 @@
 }
 
 .myClosetClothes {
-  color: #6c006c;
+  color: navy;
+  
 }
 
 .myClosetClothes:hover {
@@ -86,18 +87,30 @@
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin: 10px;
+  width: 24%;
+  height: 60px;
 }
 
 .myClosetClothes {
   display: flex;
   justify-content: space-evenly;
-  flex-flow: column;
+  flex-flow: row;
+  padding: auto;
+  margin: auto;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
+
 #myClosetContiner {
-  height: 1030px;
+  height: 800px;
 }
 
 a:visited {
-  color: olive;
+  color: navy;
+}
+
+a:hover {
+  color: green;
 }
