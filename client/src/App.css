@@ -2,6 +2,9 @@
   text-align: center;
   background-color: rgba(189, 213, 224, 0.281);
 }
+html, body, #app, #app>div {
+  height: 100%
+}
 
 #headerComponentContainer {
   border: solid 1px;
