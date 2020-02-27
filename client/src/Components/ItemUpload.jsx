@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
+import './ItemUpload.css';
 
 class Item extends React.Component {
   constructor(props) {
@@ -99,19 +100,19 @@ class Item extends React.Component {
       <div>
         <p>Add an item</p>
         <form onSubmit={this.handleSubmit}>
-          <input type="file" onChange={this.handleFileInput} />
+          <input className="ItemUploadInputs" type="file" onChange={this.handleFileInput} />
 
-          <input type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} />
+          <input id="colorChoiceInput" className="ItemUploadInputs" type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} />
 
-          <select name='fabChoice' onChange={this.handleInput}>
+          <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput}>
             {fabOptions}
           </select>
 
-          <select name='typeChoice' onChange={this.handleInput}>
+          <select className="ItemUploadInputs" name='typeChoice' onChange={this.handleInput}>
             {typeOptions}
           </select>
 
-          <input type='submit' value='upload' />
+          <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' />
         </form>
       </div>
     )

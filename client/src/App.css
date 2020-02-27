@@ -38,6 +38,7 @@
 
 #ClothingChecklistHeaderTag {
   text-align: center;  
+  color: #6c006c;
 }
 
 .componentHeaderDiv {
@@ -45,16 +46,27 @@
   margin-top: 1%;
   margin-right: auto;
   margin-left: auto;
-  border: solid 1px;
+  display: inline-block;
 }
 
 #myClosetContentDiv {
-  width: 30%;
-  height: 60%;
+  width: 20%;
+  height: 40px;
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
-  border: solid 1px;
+}
+
+.myClosetClothes {
+  color: #6c006c;
+}
+
+.myClosetClothes:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+}
+
+#clothingCheckListHeaderDiv {
+  border-radius: 25px;
 }
 
 .inputCaption {
@@ -64,4 +76,24 @@
 .inputField {
   width: 80%;
   height: 30px;
+}
+
+.eachFabricTypeDiv {
+  border: solid
+}
+
+.FabricTypeDiv {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.myClosetClothes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column;
+}
+
+#myClosetContiner {
+  height: 1030px;
 }
