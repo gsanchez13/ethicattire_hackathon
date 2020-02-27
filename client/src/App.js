@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Nav from "./Components/Nav";
 import About from "./Components/About";
 import Fabrics from "./Components/Fabrics";

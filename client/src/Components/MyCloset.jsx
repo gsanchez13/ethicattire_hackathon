@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
-import GetItems from "./GetItems";
-import { Switch, Route, withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
-import ItemUpload from './ItemUpload'
+import ItemUpload from './ItemUpload';
 import "../App.css";
 
 class MyCloset extends React.Component {
@@ -60,7 +59,6 @@ class MyCloset extends React.Component {
         console.log("render method data:", data);
         return (
             <div id="myClosetContiner">
-                <Header />
                 <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
                 <ItemUpload />
                 <div className="componentHeaderDiv">
@@ -80,7 +78,7 @@ class MyCloset extends React.Component {
                         {
                             data.map(element => {
                                 return (
-                                    <div className="FabricTypeDiv">
+                                    <div className="FabricTypeDiv" key={element.clothes_type}>
                                         <Link to={`/closet/user/${user}/clothes/${element.id}`}><p className="myClosetClothes">{element.clothes_type}</p></Link>
                                     </div>
                                 );

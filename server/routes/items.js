@@ -66,8 +66,6 @@ router.get('/types', async (req, res, next) => {
 router.get('/count/:user_id', async (req, res, next) => {
   try {
     let itemCount = await itemsQueries.getSusItemsCount(req.params.user_id);
-    // console.log(req.params.user_id)
-    // console.log(itemCount)
     res.status(200).json({
       payload: itemCount,
       msg: "all sustainable clothing received",
