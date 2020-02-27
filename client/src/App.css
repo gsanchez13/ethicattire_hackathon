@@ -6,51 +6,51 @@ html, body, #app, #app>div {
   height: 100%
 }
 
-#headerComponentContainer {
-  border: solid 1px;
-  display: inline-block;
-  width: 100%;
-}
+#headerComponentContainer {	
+  border: solid 1px;	
+  display: inline-block;	
+  width: 100%;	
+}	
 
-#nameOfAppDiv {
-  text-align: left;
-  height: 1%;
-  width: 20%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  display: inline-block;
-}
+#nameOfAppDiv {	
+  text-align: left;	
+  height: 1%;	
+  width: 20%;	
+  margin-top: 1%;	
+  margin-bottom: 1%;	
+  display: inline-block;	
+}	
 
-#nameOfAppHeaderTag {
-  text-align: center;
-}
+#nameOfAppHeaderTag {	
+  text-align: center;	
+}	
 
-#navbarContainer {
-  border: solid 1px;
-  display: inline-block;
-  width: 70%;
-  height: 50%;
-  margin-left: 2%
-}
+#navbarContainer {	
+  border: solid 1px;	
+  display: inline-block;	
+  width: 70%;	
+  height: 50%;	
+  margin-left: 2%	
+}	
 
-.HeaderNavElements {
-  display: inline-block;
-  text-align: center;
-  width: 15%;
-}
+.HeaderNavElements {	
+  display: inline-block;	
+  text-align: center;	
+  width: 15%;	
+}	
 
-#ClothingChecklistHeaderTag {
+#ClothingChecklistHeaderTag {	
   text-align: center;  
   color: navy;
 }
 
-.componentHeaderDiv {
-  width: 30%;
-  margin-top: 1%;
-  margin-right: auto;
-  margin-left: auto;
-  display: inline-block;
-}
+.componentHeaderDiv {	
+  width: 30%;	
+  margin-top: 1%;	
+  margin-right: auto;	
+  margin-left: auto;	
+  border: solid 1px;	
+}	
 
 #myClosetContentDiv {
   width: 99%;
@@ -61,10 +61,16 @@ html, body, #app, #app>div {
 }
 
 .myClosetClothes {
-  color: navy;
-  
+  color: #6c006c;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row;
+  padding: auto;
+  margin: auto;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-
 .myClosetClothes:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
 }
@@ -93,18 +99,6 @@ html, body, #app, #app>div {
   width: 24%;
   height: 60px;
 }
-
-.myClosetClothes {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row;
-  padding: auto;
-  margin: auto;
-  flex-wrap: wrap;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 
 #myClosetContiner {
   height: 800px;

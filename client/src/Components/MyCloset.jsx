@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import axios from "axios";
 import GetItems from "./GetItems";
 import { Switch, Route, withRouter, Link } from 'react-router-dom';

@@ -1,0 +1,35 @@
+#headerComponentContainer {
+    border: solid 1px;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  #nameOfAppDiv {
+    text-align: left;
+    height: 1%;
+    width: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: inline-block;
+  }
+  
+  #nameOfAppHeaderTag {
+    text-align: center;
+  }
+  
+  #navbarContainer {
+    /* border: solid 1px; */
+    display: inline-block;
+    width: 70%;
+    height: 50%;
+    margin-left: 2%;
+
+    
+  }
+
+  .HeaderNavElements {
+  display: inline-block;
+  /* text-align: center; */
+  text-align: right;
+  width: 12.5%;
+}
