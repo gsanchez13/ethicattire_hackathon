@@ -18,22 +18,21 @@ class MyCloset extends React.Component {
     }
 
     async componentDidMount() {
-        console.log(this.state.data);
-
-        try {
-            let clothes = await axios.get(`http://localhost:3000/items/types`);
-            console.log("clothes:", clothes);
-            console.log("clothes.data:", clothes.data)
-            console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
-            this.setState({
-                data: clothes.data.payload
-            });
-            let newData = [...this.state.data];
-            console.log("newData:", newData);
-            clothes.data.payload.map(element => {
-                newData.push(element.item_type)
-            });
-
+            try {
+                let clothes = await axios.get(`http://localhost:3000/items/types`);
+                console.log("clothes.data.payload:", clothes.data.payload)
+                console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
+                this.setState({
+                    data: clothes.data.payload
+                });
+                let newData = [...this.state.data];
+                console.log("newData:", newData);
+                clothes.data.payload.map(element => {
+                    if(element.item_type) {
+                        newData.push(element.item_type)
+                    }
+                });
+              
             console.log("state:", this.state);
 
         } catch (err) {
