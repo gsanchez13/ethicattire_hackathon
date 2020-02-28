@@ -5,6 +5,7 @@ import ItemUploadRender from './ItemUploadRender.jsx';
 
 
 import './ClothingItem.css';
+
 class ClothingItem extends Component {
     constructor() {
         super();
