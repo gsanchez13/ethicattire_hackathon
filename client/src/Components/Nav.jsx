@@ -21,14 +21,11 @@ const Nav = () => {
           <Link to="/shops">
             <h3 className="HeaderNavElements">Shops</h3>
           </Link>{" "}
-          <Link to="/mission">
-            <h3 className="HeaderNavElements">Mission</h3>
-          </Link>{" "}
           <Link to="/info">
-            <h3 className="HeaderNavElements">Info</h3>
-          </Link>
-          <Link to="/about">
-            <h3 className="HeaderNavElements">About</h3>
+            <h3 className="HeaderNavElements">What is Sustainabilty?</h3>
+          </Link>{" "}
+          <Link to="/mission">
+            <h3 className="HeaderNavElements"> Our Mission</h3>
           </Link>{" "}
         </nav>
       </div>
