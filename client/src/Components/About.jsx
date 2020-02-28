@@ -5,7 +5,7 @@ const About = () => {
     return(
         <div id="aboutContainer">
             <h1> About </h1>
-            <p>Welcome to Ethic Attire!</p>
+            <p></p>
         </div>
     );
 }
