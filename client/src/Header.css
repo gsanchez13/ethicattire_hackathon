@@ -28,8 +28,5 @@
   }
 
   .HeaderNavElements {
-  display: inline-block;
-  /* text-align: center; */
-  text-align: right;
-  width: 12.5%;
+  width: 16.5%;
 }
