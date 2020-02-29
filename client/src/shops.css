@@ -1,48 +1,19 @@
 .main {
-    padding-top: 10px;
-    text-align: left;
+    padding-top: 10px;  
+    padding-left: 20%; 
 }
 
 .ShopsHeading {
     font-family: 'Questrial';
-    color:blue;
+    color:green;
 }
 
-p, h2 {
+p {
     font-family: 'Asap' ;
 }
 
 a {
     font-family: 'Asap' ;
     text-decoration: none;
-    margin-left: 2%;
-}
-
-li {
-    list-style: none;
-}
-
-img {
-    border: 1px solid black;
-    width:150px;
-
-}
-
-.storePicDiv {
-    display: inline-block;
-    width: 20%;
-}
-
-.storeInfoDiv {
-    display: inline-block;
-    border: solid 1px;
-    width: 60%;
-    height: 50%;
-    margin-bottom: 6%;
-    position: relative;
-    bottom: 60px;
-}
-
-p {
     margin-left: 2%;
 }

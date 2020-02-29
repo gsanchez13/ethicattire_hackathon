@@ -1,6 +1,7 @@
 .FabricTitle {
     font-family: 'Questrial';
     color:blue;
+  
   }
 
 .FabricTitle:hover{
@@ -17,6 +18,10 @@
   .FabricImg{
       width: 300px;
       border: 4px solid black;
+  }
+
+  .card{
+   margin-right: 38%;
   }
   
  

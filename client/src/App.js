@@ -14,9 +14,12 @@ import Linen from "./Components/FabricItems/Linen"
 import Silk from "./Components/FabricItems/Silk"
 import Polyester from "./Components/FabricItems/Polyester"
 import ClothingItem from "./Components/ClothingItem";
+
 import Info from "./Components/Info";
 import Example from "./Components/Example";
 import M from 'materialize-css';
+import Hemp from "./Components/FabricItems/Hemp"
+
 
 class App extends React.Component {
   state = {
@@ -38,6 +41,7 @@ class App extends React.Component {
             {/* <Route exact path="/login" component={Login} /> */}
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/Cotton" component={Cotton} />
+            <Route exact path="/Hemp" component={Hemp} />
             <Route exact path="/Linen" component={Linen} />
             <Route exact path="/Polyester" component={Polyester} />
             <Route exact path="/Silk" component={Silk} />

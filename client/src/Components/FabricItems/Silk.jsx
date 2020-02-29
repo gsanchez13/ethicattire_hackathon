@@ -3,6 +3,7 @@ import React from "react";
 const Silk = () => {
   return (
     <div className="FabricTitle">
+       <div className="card">
       <h1>Silk Care</h1>
       <img className="FabricImg" src="https://cdn.pixabay.com/photo/2018/09/11/20/43/silk-3670576_1280.jpg" alt="silk"></img>
 
@@ -58,6 +59,7 @@ const Silk = () => {
         </li>
       </ul>
       </p>
+    </div>
     </div>
   );
 };
