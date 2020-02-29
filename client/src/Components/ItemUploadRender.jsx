@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./ItemUploadRender.css";
 
 class ItemUploadRender extends Component {
     constructor() {
@@ -64,7 +65,7 @@ class ItemUploadRender extends Component {
 
         return (
             <div>
-                <p>Add an item</p>
+                <h1>Add an item</h1>
                 <form onSubmit={this.props.handleSubmit}>
                     <input className="ItemUploadInputs" type="file" onChange={this.props.handleFileInput} required />
 
