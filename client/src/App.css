@@ -45,10 +45,9 @@ html, body, #app, #app>div {
 
 .componentHeaderDiv {	
   width: 30%;	
-  margin-top: 1%;	
+  margin-top: 5%;	
   margin-right: auto;	
-  margin-left: auto;	
-  border: solid 1px;	
+  margin-left: auto;	  	
 }	
 
 #myClosetContentDiv {

@@ -60,21 +60,11 @@ class MyCloset extends React.Component {
         return (
             <div id="myClosetContiner">
                 <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
-                <ItemUpload />
                 <div className="componentHeaderDiv">
-                    <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Clothing Checklist</h2>
+                    <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Closet Score</h2>
                 </div>
                 <div id="myClosetContentDiv">
                     <div className="myClosetClothes">
-                        {
-                            // this.state.data 
-                            // ? (
-                            //     <Link to={`/closet/user/${user}/clothes/${clothesId}`}>
-                            //         <GetItems data={data} />
-                            //    </Link>
-                            // ) 
-                            // : null
-                        }
                         {
                             data.map(element => {
                                 return (
@@ -85,6 +75,7 @@ class MyCloset extends React.Component {
                             })
                         }
                     </div>
+                    <ItemUpload />
                 </div>
             </div>
         );
