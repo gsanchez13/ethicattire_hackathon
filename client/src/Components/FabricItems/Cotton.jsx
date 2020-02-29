@@ -3,6 +3,7 @@ import React from "react";
 const Cotton = () => {
   return (
     <div className="FabricTitle">
+      <div className="card">
       <h1>Cotton Care</h1>
       <img className="FabricImg" src="https://cdn.pixabay.com/photo/2014/07/31/00/30/laundry-405878_1280.jpg" alt="cotton"></img>
       <p className="FabricDesc">
@@ -55,6 +56,7 @@ const Cotton = () => {
         
         
       </p>
+    </div>
     </div>
   );
 };

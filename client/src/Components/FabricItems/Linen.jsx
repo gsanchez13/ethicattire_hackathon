@@ -3,6 +3,7 @@ import React from "react";
 const Linen = () => {
   return (
     <div className="FabricTitle">
+      <div className="card">
       <h1>Linen Care</h1>
       <img className="FabricImg" src="https://cdn.pixabay.com/photo/2017/08/07/20/10/woven-2607344_1280.jpg" alt="linen"></img>
       <p className="FabricDesc">
@@ -62,6 +63,7 @@ const Linen = () => {
         <p>Natural fibers like linen will wrinkle, crumple and crease, you just have to accept it. However, if you really want an item pressed, use a medium-hot iron on the fabric while it’s still damp or overlay it with a damp towel.
 </p>
 </p>
+</div>
     </div>
   );
 };

@@ -29,20 +29,12 @@
     
   }
 
-  .HeaderNavElements {
-  width: 16.5%;
-  color:rgb(7, 7, 7);
+.HeaderNavElements {
+  display: inline-block;
+  width: 200px
 }
 
-.HeaderNavElements:hover{
-  color: rgb(15, 199, 15);
+#Logo {
+  position: absolute;
+  left: 1%;
 }
-/* .HeaderNavElements q:hover{
-  color: white;
-}
-.HeaderNavElements a:visited{
-  color:white;
-}
-.HeaderNavElements a:active{
-  color:white;
-} */
