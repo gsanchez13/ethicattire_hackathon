@@ -109,7 +109,11 @@ html, body, #app, #app>div {
   background-color: floralwhite;
 }
 
-
 #myClosetContiner {
   height: 800px;
+}
+
+.mission-statement{
+  width: 75%;
+  margin:auto;
 }
