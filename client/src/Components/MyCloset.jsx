@@ -59,11 +59,7 @@ class MyCloset extends React.Component {
         console.log("render method data:", data);
         return (
             <div id="myClosetContiner">
-<<<<<<< HEAD
-                <ClosetScore />
-=======
                 <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
->>>>>>> b30867307431feece0d3d128ff85c3a3fb9c6785
                 <ItemUpload />
                 <div className="componentHeaderDiv">
                     <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Clothing Checklist</h2>
