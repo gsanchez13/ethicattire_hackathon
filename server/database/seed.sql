@@ -171,4 +171,5 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://choosmeinstyle.com/wp-content/uploads/2019/01/blue-trousers-6901.jpg',6, 5, 1, 'blue'),
             ('https://www.gentlemansguru.com/wp-content/uploads/2018/08/Mens-Royal-Blue-Floral-Blazer-from-Gentlemansguru.com_-800x800.jpg',7, 6, 1, 'blue'),
             ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
-            ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',8, 7, 1, 'blue');
+            ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',8, 7, 1, 'blue'),
+            ('https://www.childrensplace.com/wcsstore/GlobalSAS/images/tcp/products/500/1125063_1028.jpg',2,3,1,'blue');
