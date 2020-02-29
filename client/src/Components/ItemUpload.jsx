@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './ItemUpload.css';
+import M from 'materialize-css/dist/js/materialize.min.js'
 
 class Item extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class Item extends React.Component {
     })
 
     this.populateSelect();
+    M.AutoInit()
   }
 
   handleInput = (event) => {
@@ -112,11 +114,11 @@ class Item extends React.Component {
 
 
 
-          <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput} required>
+          <select className="ItemUploadInputs" class="input-field col s12" name='fabChoice' onChange={this.handleInput} required>
             {fabOptions}
           </select>
 
-          <select className="ItemUploadInputs" name='typeChoice' onChange={this.handleInput} required>
+          <select className="ItemUploadInputs" class="input-field col s12" name='typeChoice' onChange={this.handleInput} required>
             {typeOptions}
           </select>
 
