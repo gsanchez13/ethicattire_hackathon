@@ -9,7 +9,6 @@ html, body, #app, #app>div {
 #headerComponentContainer {	
   border: 1px;	
   display: inline-block;	
-  max-width: max-content;	
 }	
 
 #nameOfAppDiv {	
