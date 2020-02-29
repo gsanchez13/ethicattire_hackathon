@@ -1,6 +1,7 @@
 #headerComponentContainer {
     display: inline-block;
     width: 100%;
+    background-color: palevioletred;
   }
   
   #nameOfAppDiv {
