@@ -117,3 +117,7 @@ html, body, #app, #app>div {
   width: 75%;
   margin:auto;
 }
+.new-item{
+  display: flex;
+  flex-wrap: wrap;
+}

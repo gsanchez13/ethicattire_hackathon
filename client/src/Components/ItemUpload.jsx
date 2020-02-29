@@ -102,7 +102,7 @@ class Item extends React.Component {
     return (
       <div>
         <p>Add an item</p>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className = "new-item">
           <input className="ItemUploadInputs" type="file" onChange={this.handleFileInput} required/>
 
           {/* <input id="colorChoiceInput" className="ItemUploadInputs" type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} /> */}
