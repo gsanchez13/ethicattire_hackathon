@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Nav from "./Components/Nav";
-import About from "./Components/About";
+
 import Fabrics from "./Components/Fabrics";
 import MyCloset from "./Components/MyCloset";
 import Shops from "./Components/Shops";
@@ -14,7 +14,9 @@ import Linen from "./Components/FabricItems/Linen"
 import Silk from "./Components/FabricItems/Silk"
 import Polyester from "./Components/FabricItems/Polyester"
 import ClothingItem from "./Components/ClothingItem";
-import Info from "./Components/Info"
+import Info from "./Components/Info";
+import Example from "./Components/Example";
+import M from 'materialize-css';
 
 class App extends React.Component {
   state = {
@@ -27,7 +29,7 @@ class App extends React.Component {
         <Nav/>
           <Switch>
             <Route exact path="/" component={Login}/>
-            <Route exact path="/about" component={About} />
+            
             <Route exact path="/fabrics" component={Fabrics} />
             <Route exact path="/myCloset" component={MyCloset} />
             <Route exact path="/shops" component={Shops} />
@@ -40,6 +42,8 @@ class App extends React.Component {
             <Route exact path="/Polyester" component={Polyester} />
             <Route exact path="/Silk" component={Silk} />
             <Route exact path={`/closet/user/:userId/clothes/:clothesId`} component={ClothingItem} />
+            <Route exact path="/example" component={Example} />
+
           </Switch>
       </div>
     );

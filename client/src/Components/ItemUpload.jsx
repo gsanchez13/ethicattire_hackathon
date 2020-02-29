@@ -103,7 +103,14 @@ class Item extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input className="ItemUploadInputs" type="file" onChange={this.handleFileInput} required/>
 
-          <input id="colorChoiceInput" className="ItemUploadInputs" type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} />
+          {/* <input id="colorChoiceInput" className="ItemUploadInputs" type='text' name='colorChoice' placeholder = 'color' onChange={this.handleInput} /> */}
+
+          <div id="colorChoiceInput" class="input-field col s6">
+            <input id="color" type="text" class="validate" />
+            <label for="color">Color</label>
+          </div>
+
+
 
           <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput} required>
             {fabOptions}
@@ -113,7 +120,11 @@ class Item extends React.Component {
             {typeOptions}
           </select>
 
-          <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' required/>
+          {/* <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' required/> */}
+          <button id="ItemUploadButton" class="btn waves-effect waves-light" value="upload" type="submit" name="action" required>Submit
+             <i class="material-icons right">add_circle</i>
+         </button>
+
         </form>
       </div>
     )

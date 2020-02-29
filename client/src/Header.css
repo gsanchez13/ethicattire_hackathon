@@ -27,9 +27,12 @@
     
   }
 
-  .HeaderNavElements {
+.HeaderNavElements {
   display: inline-block;
-  /* text-align: center; */
-  text-align: right;
-  width: 12.5%;
+  width: 200px
+}
+
+#Logo {
+  position: absolute;
+  left: 1%;
 }

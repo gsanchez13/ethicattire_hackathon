@@ -1,8 +1,10 @@
 .ItemUploadInputs {
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 #colorChoiceInput {
     border-radius: 25px;
     height: 23px;
+    width: 20%;
+    display: inline-block;
 }
