@@ -74,6 +74,9 @@ class ClothingItem extends Component {
         } catch (err) {
             console.log(err)
         }
+        // this.setState({
+        //     colorChoice:''
+        // })
 
     }
 
