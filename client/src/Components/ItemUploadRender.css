@@ -1,0 +1,13 @@
+input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4%;
+}
+
+select {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;  
+    margin-top: 4%;
+}

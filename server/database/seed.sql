@@ -159,8 +159,8 @@ INSERT INTO clothes (clothes_type, amount)
             ('blazer', 1),
             ('coat', 2),
             ('sneakers', 3),
-            ('dress shoes', 1),
-            ('boots', 2);
+            ('dress shoes', 1);
+           
 
 INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 4, 1, 'blue'),
@@ -172,4 +172,3 @@ INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
             ('https://www.gentlemansguru.com/wp-content/uploads/2018/08/Mens-Royal-Blue-Floral-Blazer-from-Gentlemansguru.com_-800x800.jpg',7, 6, 1, 'blue'),
             ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
             ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',8, 7, 1, 'blue');
-
