@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background-color: #EEEDED;
+  background-color: lavender;
 }
 html, body, #app, #app>div {
   height: 100%
 }
 
 #headerComponentContainer {	
-  border: solid 1px;	
+  border: 1px;	
   display: inline-block;	
   max-width: max-content;	
 }	
@@ -71,8 +71,9 @@ html, body, #app, #app>div {
   text-transform: uppercase;
   font-weight: bold;
 }
-.myClosetClothes:hover {
+.FabricTypeDiv:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  background-color: floralwhite
 }
 
 #clothingCheckListHeaderDiv {
@@ -102,12 +103,4 @@ html, body, #app, #app>div {
 
 #myClosetContiner {
   height: 800px;
-}
-
-a:visited {
-  color: navy;
-}
-
-a:hover {
-  color: green;
 }
