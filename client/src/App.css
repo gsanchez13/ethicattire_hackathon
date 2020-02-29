@@ -34,9 +34,10 @@ html, body, #app, #app>div {
 }	
 
 .HeaderNavElements {	
-  display: inline-block;	
-  text-align: center;	
-  width: 15%;	
+  /* display: inline-block;	 */
+  text-align: center;		
+  display: flex;
+  justify-content: space-evenly;
 }	
 
 #ClothingChecklistHeaderTag {	
@@ -71,9 +72,10 @@ html, body, #app, #app>div {
   text-transform: uppercase;
   font-weight: bold;
 }
-.myClosetClothes:hover {
+/* .myClosetClothes:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
-}
+  transition: 0.3s;
+} */
 
 #clothingCheckListHeaderDiv {
   border-radius: 25px;
@@ -99,6 +101,14 @@ html, body, #app, #app>div {
   width: 24%;
   height: 60px;
 }
+
+.FabricTypeDiv:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  /* For some reason the box shadow property doesn't work */
+  background-color: floralwhite;
+}
+
 
 #myClosetContiner {
   height: 800px;

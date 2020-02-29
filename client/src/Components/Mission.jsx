@@ -30,4 +30,3 @@ eventually start living a sustainable life.</p>
     );
 }
 export default Mission;
-

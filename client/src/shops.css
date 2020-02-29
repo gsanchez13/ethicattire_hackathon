@@ -1,23 +1,19 @@
-.main{
+.main {
     padding-top: 10px;  
     padding-left: 20%; 
-   
 }
 
-.ShopsHeading{
+.ShopsHeading {
     font-family: 'Questrial';
     color:green;
 }
 
-p{
+p {
     font-family: 'Asap' ;
 }
 
-a{
+a {
     font-family: 'Asap' ;
     text-decoration: none;
-
+    margin-left: 2%;
 }
-
-
-

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Switch, Route, withRouter, Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
 import ItemUpload from './ItemUpload';
 import "../App.css";
@@ -10,13 +10,12 @@ class MyCloset extends React.Component {
         super();
         this.state = {
             user: '1',
-            data: [],
-            numOfItems: 0,
-            numOfSusItems: 0
+            data: []
         }
     }
 
     async componentDidMount() {
+
             try {
                 let clothes = await axios.get(`http://localhost:3000/items/types`);
                 console.log("clothes.data.payload:", clothes.data.payload)
@@ -31,35 +30,21 @@ class MyCloset extends React.Component {
                         newData.push(element.item_type)
                     }
                 });
-              
-            console.log("state:", this.state);
 
-        } catch (err) {
-            console.log("ERROR:", err);
-        }
-        this.getCountOfItems();
-    }
-    getCountOfItems = async () => {
-        try {
-            let clothes = await axios.get(`http://localhost:3000/items/`);
-            let susClothes = await axios.get(`http://localhost:3000/items/count/${this.state.user}`);
-            console.log(susClothes)
-            this.setState({
-                numOfItems: clothes.data.payload.length,
-                numOfSusItems: susClothes.data.payload[0].count
-            });
+                console.log("state:", this.state);
 
-        } catch (err) {
-            console.log("ERROR:", err);
+            } catch (err) {
+                console.log("ERROR:", err);
         }
     }
 
     render() {
-        const { user, data, clothesId, numOfItems, numOfSusItems } = this.state;
+        const { user, data, clothesId } = this.state;
         console.log("render method data:", data);
         return (
             <div id="myClosetContiner">
-                <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
+                {/* <Header /> */}
+                <ClosetScore />
                 <ItemUpload />
                 <div className="componentHeaderDiv">
                     <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Clothing Checklist</h2>
@@ -67,18 +52,18 @@ class MyCloset extends React.Component {
                 <div id="myClosetContentDiv">
                     <div className="myClosetClothes">
                         {
-                            // this.state.data 
-                            // ? (
-                            //     <Link to={`/closet/user/${user}/clothes/${clothesId}`}>
-                            //         <GetItems data={data} />
-                            //    </Link>
-                            // ) 
-                            // : null
+                        // this.state.data 
+                        // ? (
+                        //     <Link to={`/closet/user/${user}/clothes/${clothesId}`}>
+                        //         <GetItems data={data} />
+                        //    </Link>
+                        // ) 
+                        // : null
                         }
                         {
                             data.map(element => {
                                 return (
-                                    <div className="FabricTypeDiv" key={element.clothes_type}>
+                                    <div className="FabricTypeDiv"> 
                                         <Link to={`/closet/user/${user}/clothes/${element.id}`}><p className="myClosetClothes">{element.clothes_type}</p></Link>
                                     </div>
                                 );

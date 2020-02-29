@@ -166,7 +166,8 @@ const Shops = () => {
           </Col>
           </div>
       </div>
-    </>
+    </div>
+
   );
 };
 
