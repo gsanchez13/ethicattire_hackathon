@@ -102,3 +102,10 @@ html, body, #app, #app>div {
 #myClosetContiner {
   height: 800px;
 }
+
+.mission-statement{
+  width: 75%;
+  margin:auto;
+  height: 100vh;
+  font-size: larger;
+}
