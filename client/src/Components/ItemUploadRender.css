@@ -1,13 +1,15 @@
-input {
+.ItemUploadRender {
     display: block;
     margin-right: auto;
     margin-left: auto;
     margin-top: 4%;
 }
 
-select {
-    display: block;
+#ItemUploadRenderButton {
     margin-right: auto;
-    margin-left: auto;  
-    margin-top: 4%;
+    margin-left: auto;
+}
+
+#ItemUploadRenderFileUpload {
+    margin-left: 22%;;
 }
