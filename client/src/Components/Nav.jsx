@@ -17,29 +17,28 @@ const Nav = () => {
         <li className="HeaderNavElements"><Link exact to="/mission">About</Link></li>
       </ul>
      </div>
-    </nav
-<!--     <div>
-    <Navbar className="nav-wrapper white" alignLinks="right">
+    </nav>
+// <div>
+//     <Navbar className="nav-wrapper white" alignLinks="right">
 
-      <NavItem>
-        <Link to="/mycloset">My Closet</Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/fabrics">Fabrics</Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/Shops">Shops </Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/info">Info </Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/mission">Mission </Link>
-      </NavItem>
-    </Navbar> -->
-
-    </div>
-  </nav>
+//       <NavItem>
+//         <Link to="/mycloset">My Closet</Link>
+//       </NavItem>
+//       <NavItem>
+//         <Link to="/fabrics">Fabrics</Link>
+//       </NavItem>
+//       <NavItem>
+//         <Link to="/Shops">Shops </Link>
+//       </NavItem>
+//       <NavItem>
+//         <Link to="/info">Info </Link>
+//       </NavItem>
+//       <NavItem>
+//         <Link to="/mission">Mission </Link>
+//       </NavItem>
+//     </Navbar>
+  //   </div>
+  // </nav>
 
   );
 };

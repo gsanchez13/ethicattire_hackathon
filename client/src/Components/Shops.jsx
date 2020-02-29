@@ -5,7 +5,7 @@ import "../shops.css";
 
 const Shops = () => {
   return (
-    <>
+    <div>
       <h1 className="ShopsHeading">Shops</h1>
 
       <div className="main">
@@ -167,7 +167,6 @@ const Shops = () => {
           </div>
       </div>
     </div>
-
   );
 };
 
