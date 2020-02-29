@@ -109,13 +109,8 @@ html, body, #app, #app>div {
   background-color: floralwhite;
 }
 
-
 #myClosetContiner {
   height: 800px;
-}
-
-a:visited {
-  color: navy;
 }
 
 .mission-statement{
