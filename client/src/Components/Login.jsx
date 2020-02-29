@@ -7,16 +7,10 @@ import MyCloset from './MyCloset';
 const Login = () => {
     return (
         <div>
-          
-            <div id="f">
-                <Link to="/myCloset" >
-                    <h2 id="nameOfAppHeaderTag">Ethic Attire</h2>
-                </Link>
-         
-            </div>
             <div className="">
                 <h2 className="login-title">Login</h2>
             </div>
+            <br></br><br></br>
             <form>
                 <div id="login-box">
                     <input className="inputField" type="text" placeholder=" Username" />
