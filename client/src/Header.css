@@ -2,7 +2,10 @@
     border: solid 1px;
     display: inline-block;
     width: 100%;
+    background-color:palevioletred;
+    padding: -1px      
   }
+  
   
   #nameOfAppDiv {
     text-align: left;
