@@ -67,19 +67,19 @@ class ItemUploadRender extends Component {
             <div>
                 <h1>Add an item</h1>
                 <form onSubmit={this.props.handleSubmit}>
-                    <input className="ItemUploadInputs" type="file" onChange={this.props.handleFileInput} required />
+                    <input id="ItemUploadRenderFileUpload" className="ItemUploadRender " type="file" onChange={this.props.handleFileInput} required />
 
-                    <input id="colorChoiceInput" className="ItemUploadInputs" type='text' name='colorChoice' placeholder='color' onChange={this.props.handleInput} />
+                    <input id="colorChoiceInput" className="ItemUploadRender" type='text' name='colorChoice' placeholder='color' onChange={this.props.handleInput} />
 
-                    <select className="ItemUploadInputs" name='fabChoice' onChange={this.props.handleInput} required>
+                    <select className="ItemUploadRender" name='fabChoice' onChange={this.props.handleInput} required>
                         {fabOptions}
                     </select>
 
-                    <select className="ItemUploadInputs" name='typeChoice' onChange={this.props.handleInput} required>
+                    <select className="ItemUploadRender" name='typeChoice' onChange={this.props.handleInput} required>
                         {typeOptions}
                     </select>
 
-                    <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' required />
+                    <input id="ItemUploadRenderButton" className="ItemUploadInputs" type='submit' value='upload' required />
                 </form>
             </div>
         )
