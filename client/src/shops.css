@@ -1,14 +1,15 @@
 .main{
-    padding-top: 10px;
-    text-align: left;
+    padding-top: 10px;  
+    padding-left: 20%; 
+   
 }
 
 .ShopsHeading{
     font-family: 'Questrial';
-    color:blue;
+    color:green;
 }
 
-p, h2{
+p{
     font-family: 'Asap' ;
 }
 
@@ -18,12 +19,5 @@ a{
 
 }
 
-li{
-    list-style: none;
-}
 
-img{
-    border: 3px solid black;
-    width:150px;
 
-}
