@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Nav from "./Components/Nav";
-
+import Hemp from "./Components/FabricItems/Hemp"
 import Fabrics from "./Components/Fabrics";
 import MyCloset from "./Components/MyCloset";
 import Shops from "./Components/Shops";
@@ -35,6 +35,7 @@ class App extends React.Component {
             <Route exact path="/mission" component={Mission} />
             {/* <Route exact path="/login" component={Login} /> */}
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/Hemp" component={Hemp} />
             <Route exact path="/Cotton" component={Cotton} />
             <Route exact path="/Linen" component={Linen} />
             <Route exact path="/Polyester" component={Polyester} />
