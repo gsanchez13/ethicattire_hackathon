@@ -1,8 +1,12 @@
 #headerComponentContainer {
     display: inline-block;
     width: 100%;
+<<<<<<< HEAD
     background-color:palevioletred;
     padding: -1px      
+=======
+    background-color: palevioletred;
+>>>>>>> e6b05a5fdf69895294904c7b33d1e083950051f2
   }
   
   
