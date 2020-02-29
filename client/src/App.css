@@ -113,11 +113,3 @@ html, body, #app, #app>div {
 #myClosetContiner {
   height: 800px;
 }
-
-a:visited {
-  color: navy;
-}
-
-a:hover {
-  color: green;
-}

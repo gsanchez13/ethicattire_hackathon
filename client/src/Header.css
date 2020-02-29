@@ -1,3 +1,7 @@
+.nav-wrapper {
+  background-color:rgb(216, 136, 111);
+}
+
 #headerComponentContainer {
     border: solid 1px;
     display: inline-block;
