@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import './ItemUpload.css';
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
 
 class Item extends React.Component {
   constructor(props) {
@@ -14,10 +18,18 @@ class Item extends React.Component {
       typeChoice: '',
       colorChoice: '',
       image: null,
+
+
+
+    openFabrics: false,
+    openTypes: false
+
+
     }
   }
 
   async componentDidMount() {
+    console.log("component mounted", this.state)
     let fabResponse = await axios.get('http://localhost:3000/fabrics');
     let tyResponse = await axios.get('http://localhost:3000/items/types');
 
@@ -37,10 +49,60 @@ class Item extends React.Component {
     })
 
     this.populateSelect();
+        console.log("component mounted 1", this.state)
+
   }
+
+  
+  handleChange = event => {
+      //setAge(event.target.value);
+      this.setState({
+        age: event.target.value
+      });
+  }
+
+  handleCloseForFabric = () => {
+      //setOpen(false);
+      this.setState({
+        openFabrics: false
+      });
+  }
+
+
+  handleOpenForFabric = () => {
+      //setOpen(true);
+      this.setState({
+        openFabrics: true
+      });
+    }
+
+    handleCloseForType = () => {
+      //setOpen(false);
+      this.setState({
+        openTypes: false
+      });
+  }
+
+
+  handleOpenForType = () => {
+      //setOpen(true);
+      this.setState({
+        openTypes: true
+      });
+    }
+
+
+
+
+
+
+
+
+
 
   handleInput = (event) => {
     const { name, value } = event.target;
+    console.log("event", event.target.value, name)
     this.setState({
       [name]: value
     })
@@ -76,14 +138,14 @@ class Item extends React.Component {
     const { fabrics, types } = this.state
     let fabOpts = [];
     let typeOpts = [];
-    fabOpts.push(<option value={''} key={''}>Choose a fabric</option>)
-    typeOpts.push(<option value={''} key={''}>Choose a Clothing Type</option>)
+    fabOpts.push(<MenuItem value={''} key={''}>Choose a fabric</MenuItem>)
+    typeOpts.push(<MenuItem value={''} key={''}>Choose a Clothing Type</MenuItem>)
 
     for (let i = 0; i < fabrics.length; i++) {
-      fabOpts.push(<option value={i + 1} key={fabrics[i]}>{fabrics[i]}</option>);
+      fabOpts.push(<MenuItem value={i + 1 || ""} key={fabrics[i]}>{fabrics[i]}</MenuItem>);
     }
     for (let i = 0; i < types.length; i++) {
-      typeOpts.push(<option value={i + 1} key={types[i]}>{types[i]}</option>);
+      typeOpts.push(<MenuItem value={i + 1 || ""} key={types[i]}>{types[i]}</MenuItem>);
     }
 
     this.setState({
@@ -95,7 +157,11 @@ class Item extends React.Component {
   }
 
   render() {
-    let { fabOptions, typeOptions } = this.state;
+    let { fabOptions, typeOptions, openFabrics, openTypes } = this.state; 
+    //const [age, setAge] = React.useState("");
+    //const [open, setOpen] = React.useState(false);
+
+    
 
     return (
       <div>
@@ -112,13 +178,44 @@ class Item extends React.Component {
 
 
 
-          <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput} required>
+          <InputLabel id="demo-controlled-open-select-label">Fabric Options</InputLabel>
+          <Select 
+            labelId="demo-controlled-open-select-label"
+            id="demo-controlled-open-select"
+            open={openFabrics}
+            onClose={this.handleCloseForFabric}
+            onOpen={this.handleOpenForFabric}
+            onChange={this.handleInput}
+            className="ItemUploadInputs"
+            name="fabChoice"
+            
+          >
+          {fabOptions}
+          </Select>
+
+
+          <InputLabel id="demo-controlled-open-select-label">Type Options</InputLabel>
+          <Select 
+            
+            open={openTypes}
+            onClose={this.handleCloseForType}
+            onOpen={this.handleOpenForType}
+            onChange={this.handleChange}
+            className="ItemUploadInputs"
+            name="typeChoice"
+            
+          >
+          {typeOptions}
+          </Select>
+
+
+          {/* <select className="ItemUploadInputs" name='fabChoice' onChange={this.handleInput} required>
             {fabOptions}
           </select>
 
           <select className="ItemUploadInputs" name='typeChoice' onChange={this.handleInput} required>
             {typeOptions}
-          </select>
+          </select> */}
 
           {/* <input id="ItemUploadButton" className="ItemUploadInputs" type='submit' value='upload' required/> */}
           <button id="ItemUploadButton" class="btn waves-effect waves-light" value="upload" type="submit" name="action" required>Submit

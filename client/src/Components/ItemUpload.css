@@ -8,3 +8,12 @@
     width: 20%;
     display: inline-block;
 }
+
+#example {
+    width: 100%;
+    background-color: blue;
+}
+
+#demo-controlled-open-select {
+    display: inline-block;
+}
