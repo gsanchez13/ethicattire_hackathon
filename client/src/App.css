@@ -40,7 +40,7 @@ html, body, #app, #app>div {
 
 #ClothingChecklistHeaderTag {	
   text-align: center;  
-  color: navy;
+  color: palevioletred;
 }
 
 .componentHeaderDiv {	
@@ -60,7 +60,7 @@ html, body, #app, #app>div {
 }
 
 .myClosetClothes {
-  color: #6c006c;
+  color: palevioletred;
   display: flex;
   justify-content: space-evenly;
   flex-flow: row;
@@ -103,3 +103,7 @@ html, body, #app, #app>div {
 #myClosetContiner {
   height: 800px;
 }
+
+a:visited {
+  color: lightblue;
+} 
