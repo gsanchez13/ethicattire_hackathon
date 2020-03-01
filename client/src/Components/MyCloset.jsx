@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
-import "../App.css";
+import "../css-files/MyCloset.css";
 
 class MyCloset extends React.Component {
     constructor() {
@@ -57,17 +57,20 @@ class MyCloset extends React.Component {
         const { user, data, clothesId, numOfItems, numOfSusItems } = this.state;
         console.log("render method data:", data);
         return (
-            <div id="myClosetContiner">
-                <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
-                <div className="componentHeaderDiv">
-                    <h2 className="componentHeaderTag">Closet Score</h2>
+            <div id="myClosetContainer">
+
+                <div className="closet-score">
+                <h2 className="componentHeaderTag"> Closet Sustainable Score: </h2>
+                <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems} className="radial-score"/>
                 </div>
+
                 <div id="myClosetContentDiv">
                     <div className="myClosetClothes">
                         {
                             data.map(element => {
                                 return (
                                     <div className="FabricTypeDiv" key={element.clothes_type}>
+                                        <img src={require("../leaflet.png")} alt="leaflet" className="leaflet" />
                                         <Link to={`/closet/user/${user}/clothes/${element.id}`}><p className="myClosetClothes">{element.clothes_type}</p></Link>
                                     </div>
                                 );

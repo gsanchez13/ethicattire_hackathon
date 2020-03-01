@@ -31,8 +31,8 @@
 }
 
 .shop-image {
-        margin:0 auto;
-    
+    margin:0 auto;
+    width: 150px;
 }
 
 
@@ -50,8 +50,6 @@ li{
     list-style: none;
 }
 
-img{
-    border: 3px solid black;
+/* img{
     width:150px;
-
-}
+} */

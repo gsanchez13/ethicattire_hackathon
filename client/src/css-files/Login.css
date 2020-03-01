@@ -4,15 +4,25 @@
     margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
+    /* display: flex;
+    flex-flow: column */
   }
+  .inputField {
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: lavenderblush;
+    font-family: 'Questrial';
 
+  }
   #login-title{
     font-family: 'Questrial';
   }
 
   .input{
     color: black;
-    font-family: 'Asap' ;
+    font-family: 'Asap';
   }
 
   .name-of-app a{
