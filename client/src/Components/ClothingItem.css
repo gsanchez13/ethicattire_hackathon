@@ -3,12 +3,17 @@
     width: 80%
 }
 
+h1{
+  font-family: 'Questrial';
+}
+
 .clothing-container {
     display: flex;
     justify-content: space-evenly;
     flex-flow: row;
     padding: auto;
     margin: auto;
+    font-family: asap;
 }
 
 .clothing-item {
