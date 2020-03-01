@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
-import ItemUpload from './ItemUpload';
 import "../App.css";
 
 class MyCloset extends React.Component {
@@ -61,7 +60,7 @@ class MyCloset extends React.Component {
             <div id="myClosetContiner">
                 <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
                 <div className="componentHeaderDiv">
-                    <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Closet Score</h2>
+                    <h2 className="componentHeaderTag">Closet Score</h2>
                 </div>
                 <div id="myClosetContentDiv">
                     <div className="myClosetClothes">
@@ -75,7 +74,6 @@ class MyCloset extends React.Component {
                             })
                         }
                     </div>
-                    <ItemUpload />
                 </div>
             </div>
         );

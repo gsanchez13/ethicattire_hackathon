@@ -20,16 +20,14 @@ html, body, #app, #app>div {
   display: inline-block;	
 }	
 
-#nameOfAppHeaderTag {	
-  text-align: center;	
-}	
 
 #navbarContainer {	
-  border: solid 1px;	
+  /* border: solid 1px;	 */
   display: inline-block;	
   width: 70%;	
   height: 50%;	
-  margin-left: 2%	
+  margin-left: 2%;
+  margin-top: 0rem
 }	
 
 .HeaderNavElements {	
