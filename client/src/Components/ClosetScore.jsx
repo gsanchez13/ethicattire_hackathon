@@ -1,7 +1,7 @@
 import React from 'react';
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import '../closetScore.css';
+import '../css-files/ClosetScore.css';
 
 
 const ClosetScore = (props) => {

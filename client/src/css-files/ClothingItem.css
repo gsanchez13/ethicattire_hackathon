@@ -1,3 +1,6 @@
+.clothing-item-component {
+  height:100vh
+}
 .clothes-image {
     height: 60%;
     width: 80%
@@ -31,7 +34,7 @@ h1{
     transition: 0.3s;
     padding: 2px 16px;
     width: 20%;
-    height: 60vh;
+    height: 50vh;
     margin: 20px;
   }
   /* On mouse-over, add a deeper shadow */
@@ -43,6 +46,6 @@ h1{
   transition: 0.3s;
   padding: 2px 16px;
   width: 20%;
-  height: 60vh;
+  height: 50vh;
   margin: 20px;
 }

@@ -1,0 +1,10 @@
+.score {
+    width: 40%;
+    display: inline-block;
+    text-align: right;
+    /* position: absolute; */
+    /* right: 0; */
+    margin: auto;
+    /* margin-top: -2%;
+    margin-right: 37%; */
+  }

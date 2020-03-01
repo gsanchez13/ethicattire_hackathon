@@ -37,7 +37,7 @@ CREATE TABLE items (
 
 
 INSERT INTO users (username, password, style) 
-   VALUES ('sharr', 'east', false);
+   VALUES ('Adam', '123', false);
 
 INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img) 
    VALUES('Hemp', 1, 'Hemp clothing is made from a natural fiber with many amazing advantages, both ecological 

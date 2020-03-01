@@ -1,6 +1,5 @@
 import React from "react";
-
-import "../shops.css";
+import "../css-files/Shops.css";
 
 const Shops = () => {
   return (
@@ -23,7 +22,7 @@ const Shops = () => {
             <a
               href="https://www.levi.com/US/en_US/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" className="shop-image"
             >
               Levis
             </a>{" "}
@@ -41,7 +40,7 @@ const Shops = () => {
           <div className="shop-item">
             <img
               src="https://www.alternativeapparel.com/media/catalog/product/0/1/01970E1ECOATL0_2.jpg"
-              alt="alternative-apparel"
+              alt="alternative-apparel" className="shop-image"
             ></img>
             <br />
             <a
@@ -61,7 +60,7 @@ const Shops = () => {
             <img
               className="shop-image"
               src="https://static.wearpact.com/img/product/women/wtw-frn-1-1582139939.jpg"
-              alt="target"
+              alt="target" className="shop-image"
             ></img>
             <br />
             <a
@@ -82,7 +81,7 @@ const Shops = () => {
           <div className="shop-item">
             <img
               src="https://media.thereformation.com/image/upload/q_auto:eco/c_scale,w_auto:breakpoints_100_2560_9_20:632/v1/prod/product_images/ruskin-top/avocado/5e52cb0c8130bc5051f985ad/original.jpg"
-              alt="thereformation"
+              alt="thereformation" className="shop-image"
             ></img>
             <br />
             <a href="https://www.thereformation.com/">Reformation</a>
@@ -96,7 +95,7 @@ const Shops = () => {
               src={
                 "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwa62bca57/images/hi-res/gray.jpg?sw=800&sh=800&ox=0&oy=0&oimg=https%3A%2F%2Fwww.patagonia.com%2Fdw%2Fimage%2Fv2%2FBDJB_PRD%2Fon%2Fdemandware.static%2F-%2FSites-patagonia-master%2Fdefault%2Fdw86926441%2Fimages%2Fhi-res%2F56540_NENA_RP1.png%3Fsw%3D800%26sh%3D800%26q%3D95&sfrm=png&q=95"
               }
-              alt="patagonia"
+              alt="patagonia" className="shop-image"
             ></img>
             <br />
             <a href="https://www.patagonia.com/home/">Patagonia</a>
@@ -107,7 +106,7 @@ const Shops = () => {
           </div>
           <div className="shop-item">
             <img src={"https://media-s3-us-east-1.ceros.com/thredup/images/2019/11/11/da4444bf8b491fa38177f724e677e362/loveherlooks-tops.jpg?imageOpt=1&fit=bounds&width=520"} 
-            alt="thred-up"/>
+            alt="thred-up" className="shop-image"/>
             <a
               href="https://www.thredup.com/"
               target="_blank"

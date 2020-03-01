@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../shops.css";
+import "../css-files/Shops.css";
 
 const Info = () => {
   return (

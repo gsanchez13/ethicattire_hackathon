@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import ItemUploadRender from './ItemUploadRender.jsx';
-
-
-import './ClothingItem.css';
+import '../css-files/ClothingItem.css';
 
 class ClothingItem extends Component {
     constructor() {
@@ -106,7 +104,7 @@ class ClothingItem extends Component {
         })
         if (sugAmount <= clothes.length) {
             return (
-                <div>
+                <div className="clothing-item-component">
                     <h1>{username}</h1>
                     <div className="clothing-container">
                         {itemsCards}
@@ -116,7 +114,7 @@ class ClothingItem extends Component {
         }
         else {
             return (
-                <div>
+                <div className = "clothing-item-component">
                     <h1>{username}</h1>
                     <div className="clothing-container">
                         {itemsCards}
