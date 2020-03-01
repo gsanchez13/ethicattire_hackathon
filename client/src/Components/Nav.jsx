@@ -7,7 +7,8 @@ const Nav = () => {
     <div id="headerComponentContainer">
       <div id="nameOfAppDiv">
         <Link to="/myCloset">
-          <h2 id="nameOfAppHeaderTag">Ethic Attire</h2>
+        <img src={require('../logo.png')} alt='logo' />
+          {/* <h2 id="nameOfAppHeaderTag">Ethic Attire</h2> */}
         </Link>
       </div>
       <div id="navbarContainer">

@@ -14,19 +14,6 @@
     display: inline-block;
   }
   
-  #nameOfAppHeaderTag {
-    text-align: center;
-  }
-  
-  #navbarContainer {
-    /* border: solid 1px; */
-    display: inline-block;
-    width: 70%;
-    height: 50%;
-    margin-left: 2%;
-
-    
-  }
 
   .HeaderNavElements {
   width: 16.5%;
