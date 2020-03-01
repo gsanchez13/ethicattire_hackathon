@@ -94,7 +94,7 @@ class ClothingItem extends Component {
                 <div className={determineClassName(item.score)} type={item.id}>
                     <h3>{username}'s {article}</h3>
                     <img src={item.img} alt={article} className="clothes-image" />
-                    <p><b>Fabric:</b> {" "}
+                    <p><b>Fabric Care:</b> {" "}
                         <Link to={`/${item.fabric}`}>
                             {item.fabric}
                         </Link>
@@ -115,7 +115,7 @@ class ClothingItem extends Component {
         else {
             return (
                 <div className = "clothing-item-component">
-                    <h1>{username}</h1>
+                    <h1>Welcome to your closet, {username}!</h1>
                     <div className="clothing-container">
                         {itemsCards}
                         <div className="upload-item" onClick={this.handleNewItem}>

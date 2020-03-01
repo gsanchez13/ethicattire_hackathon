@@ -37,7 +37,7 @@ CREATE TABLE items (
 
 
 INSERT INTO users (username, password, style) 
-   VALUES ('Adam', '123', false);
+   VALUES ('Sarah', '123', false);
 
 INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img) 
    VALUES('Hemp', 1, 'Hemp clothing is made from a natural fiber with many amazing advantages, both ecological 
@@ -164,12 +164,14 @@ INSERT INTO clothes (clothes_type, amount)
 
 INSERT INTO items (item_img, fabric_id, clothes_id, user_id, color)
    VALUES   ('https://pngimg.com/uploads/jeans/jeans_PNG5745.png',1, 4, 1, 'blue'),
-            ('https://www.growingbolder.com/wp-content/uploads/2018/11/gb-logo-mens-blue-t-shirt-back-v3.jpg',2, 1, 1, 'blue'),
+            ('https://i.ebayimg.com/images/g/FXIAAOSwmBxa288A/s-l300.jpg',2, 1, 1, 'blue'),
             ('https://dk69ohdbihujq.cloudfront.net/image/catalog/2019/clothing/43068/2-sidel-embroidery-knitwear-sweater-blue-jessica-buurman-women-street-style-clothing.png',3, 2, 1, 'blue'),
             ('https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/5/2018/11/Screen-Shot-2018-11-21-at-14.39.41-356x500.png',4, 5, 1, 'blue'),
-            ('https://www.sunspel.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtsh0001-budx_3.jpg',5, 1, 1, 'blue'),
+            ('https://di2ponv0v5otw.cloudfront.net/posts/2019/12/29/5e092fc7180efdccfc5260dc/m_5e092fe690feb6967417ef57.jpg',1, 1, 1, 'red'),
             ('https://choosmeinstyle.com/wp-content/uploads/2019/01/blue-trousers-6901.jpg',6, 5, 1, 'blue'),
             ('https://www.gentlemansguru.com/wp-content/uploads/2018/08/Mens-Royal-Blue-Floral-Blazer-from-Gentlemansguru.com_-800x800.jpg',7, 6, 1, 'blue'),
             ('https://cache.mrporter.com/variants/images/2307389542182668/fr/w2000_q80.jpg',8, 9, 1, 'blue'),
             ('https://m.media-amazon.com/images/I/711CDckYjVL._SR500,500_.jpg',8, 7, 1, 'blue'),
             ('https://www.childrensplace.com/wcsstore/GlobalSAS/images/tcp/products/500/1125063_1028.jpg',2,3,1,'blue');
+
+            

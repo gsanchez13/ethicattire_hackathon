@@ -60,8 +60,8 @@ class MyCloset extends React.Component {
             <div id="myClosetContainer">
 
                 <div className="closet-score">
+                <h2 className="componentHeaderTag"> Closet Sustainable Score: </h2>
                 <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems} className="radial-score"/>
-                <h2 className="componentHeaderTag"> Closet Sustainable Score</h2>
                 </div>
 
                 <div id="myClosetContentDiv">
