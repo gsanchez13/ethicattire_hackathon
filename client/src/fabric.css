@@ -9,14 +9,25 @@
   .FabricDesc {
     color: black;
     font-family: 'Asap' ;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 10px;
+    /* width: 80%; */
+    /* margin: 0 auto;
+    padding-top: 10px; */
   }
 
   .FabricImg{
-      width: 300px;
+      width: 200px;
       border: 4px solid black;
+  }
+
+
+
+  .Fabric-div{
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    padding: 2px 16px;
+    width:95%;
+    height: 60vh;
+    margin: 20px;
   }
   
  
