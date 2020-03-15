@@ -18,8 +18,8 @@ class ItemUploadRender extends Component {
     }
 
     async componentDidMount() {
-        let fabResponse = await axios.get('http://localhost:3100/fabrics');
-        let tyResponse = await axios.get('http://localhost:3100/items/types');
+        let fabResponse = await axios.get('/fabrics');
+        let tyResponse = await axios.get('/items/types');
 
         let fabricNames = [];
         let clothesNames = [];

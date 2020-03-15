@@ -27,7 +27,7 @@ class ClothingItem extends Component {
 
     getUsersItems = async (userId, clothesId) => {
         try {
-            let allItems = await axios.get(`http://localhost:3100/items/user/${userId}/clothes/${clothesId}`);
+            let allItems = await axios.get(`/items/user/${userId}/clothes/${clothesId}`);
             return allItems.data.payload;
         }
         catch (err) {
@@ -65,8 +65,8 @@ class ClothingItem extends Component {
         const data = new FormData();
         data.append('image', this.state.image);
         try {
-            const res = await axios.post('http://localhost:3100/upload', data);
-            const post = await axios.post(`http://localhost:3100/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
+            const res = await axios.post('/upload', data);
+            const post = await axios.post(`/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
             console.log(post, 'posting')
             this.setClothingState(this.state.user_id, this.state.clothing_id)
         } catch (err) {
