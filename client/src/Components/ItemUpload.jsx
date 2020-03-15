@@ -18,8 +18,8 @@ class Item extends React.Component {
   }
 
   async componentDidMount() {
-    let fabResponse = await axios.get('http://localhost:3000/fabrics');
-    let tyResponse = await axios.get('http://localhost:3000/items/types');
+    let fabResponse = await axios.get('http://localhost:3100/fabrics');
+    let tyResponse = await axios.get('http://localhost:3100/items/types');
 
     let fabricNames = [];
     let clothesNames = [];
@@ -58,8 +58,8 @@ class Item extends React.Component {
     const data = new FormData();
     data.append('image', this.state.image);
     try {
-      const res = await axios.post('http://localhost:3000/upload', data);
-      const post = axios.post(`http://localhost:3000/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
+      const res = await axios.post('http://localhost:3100/upload', data);
+      const post = axios.post(`http://localhost:3100/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
     } catch (err) {
       console.log(err)
     }

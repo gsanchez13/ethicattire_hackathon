@@ -17,7 +17,7 @@ class MyCloset extends React.Component {
 
     async componentDidMount() {
             try {
-                let clothes = await axios.get(`http://localhost:3000/items/types`);
+                let clothes = await axios.get(`http://localhost:3100/items/types`);
                 console.log("clothes.data.payload:", clothes.data.payload)
                 console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
                 this.setState({
@@ -40,8 +40,8 @@ class MyCloset extends React.Component {
     }
     getCountOfItems = async () => {
         try {
-            let clothes = await axios.get(`http://localhost:3000/items/`);
-            let susClothes = await axios.get(`http://localhost:3000/items/count/${this.state.user}`);
+            let clothes = await axios.get(`http://localhost:3100/items/`);
+            let susClothes = await axios.get(`http://localhost:3100/items/count/${this.state.user}`);
             console.log(susClothes)
             this.setState({
                 numOfItems: clothes.data.payload.length,
