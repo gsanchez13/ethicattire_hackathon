@@ -6,8 +6,8 @@ CREATE DATABASE seed;
 
 CREATE TABLE users (
    id SERIAL PRIMARY KEY,
-   username VARCHAR UNIQUE,
-   password VARCHAR,
+   username VARCHAR NOT NULL UNIQUE,
+   password_digest VARCHAR NOT NULL,
    style BOOLEAN
 );
 
