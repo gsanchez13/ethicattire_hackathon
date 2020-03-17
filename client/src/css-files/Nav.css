@@ -4,7 +4,6 @@
     background-color:palevioletred;     
   }
   
-  
   #nameOfAppDiv {
     text-align: left;
     height: 1%;
@@ -13,21 +12,17 @@
     margin-bottom: 1%;
     display: inline-block;
   }
-  
-  #nameOfAppHeaderTag {
-    text-align: center;
+  .logo {
+    width: 250px
   }
-  
-  #navbarContainer {
-    /* border: solid 1px; */
-    display: inline-block;
-    width: 70%;
-    height: 50%;
-    margin-left: 2%;
-
-    
-  }
-
-  .HeaderNavElements {
+.HeaderNavElements {
   width: 16.5%;
+  height: 100%;
+  color: floralwhite;
+  margin-bottom: 0%
+}
+.HeaderNavElements:hover {
+  background-color: rgb(229, 145, 175);
+  margin-bottom: 0%;
+  height: 100%;
 }

@@ -2,8 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import ClosetScore from './ClosetScore';
-import ItemUpload from './ItemUpload';
-import "../App.css";
+import "../css-files/MyCloset.css";
 
 class MyCloset extends React.Component {
     constructor() {
@@ -18,7 +17,7 @@ class MyCloset extends React.Component {
 
     async componentDidMount() {
             try {
-                let clothes = await axios.get(`http://localhost:3000/items/types`);
+                let clothes = await axios.get(`/items/types`);
                 console.log("clothes.data.payload:", clothes.data.payload)
                 console.log("clothes.data.payload[0].id:", clothes.data.payload[0].id);
                 this.setState({
@@ -41,8 +40,8 @@ class MyCloset extends React.Component {
     }
     getCountOfItems = async () => {
         try {
-            let clothes = await axios.get(`http://localhost:3000/items/`);
-            let susClothes = await axios.get(`http://localhost:3000/items/count/${this.state.user}`);
+            let clothes = await axios.get(`/items/`);
+            let susClothes = await axios.get(`/items/count/${this.state.user}`);
             console.log(susClothes)
             this.setState({
                 numOfItems: clothes.data.payload.length,
@@ -58,27 +57,20 @@ class MyCloset extends React.Component {
         const { user, data, clothesId, numOfItems, numOfSusItems } = this.state;
         console.log("render method data:", data);
         return (
-            <div id="myClosetContiner">
-                <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems}/>
-                <ItemUpload />
-                <div className="componentHeaderDiv">
-                    <h2 id="ClothingChecklistHeaderTag" className="componentHeaderTag">Clothing Checklist</h2>
+            <div id="myClosetContainer">
+
+                <div className="closet-score">
+                <h2 className="componentHeaderTag"> Closet Sustainable Score: </h2>
+                <ClosetScore totalItems={numOfItems} susItems = {numOfSusItems} className="radial-score"/>
                 </div>
+
                 <div id="myClosetContentDiv">
                     <div className="myClosetClothes">
-                        {
-                            // this.state.data 
-                            // ? (
-                            //     <Link to={`/closet/user/${user}/clothes/${clothesId}`}>
-                            //         <GetItems data={data} />
-                            //    </Link>
-                            // ) 
-                            // : null
-                        }
                         {
                             data.map(element => {
                                 return (
                                     <div className="FabricTypeDiv" key={element.clothes_type}>
+                                        <img src={require("../leaflet.png")} alt="leaflet" className="leaflet" />
                                         <Link to={`/closet/user/${user}/clothes/${element.id}`}><p className="myClosetClothes">{element.clothes_type}</p></Link>
                                     </div>
                                 );

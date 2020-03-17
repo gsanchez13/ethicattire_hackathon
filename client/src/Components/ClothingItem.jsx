@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import ItemUploadRender from './ItemUploadRender.jsx';
-
-
-import './ClothingItem.css';
+import '../css-files/ClothingItem.css';
 
 class ClothingItem extends Component {
     constructor() {
@@ -29,7 +27,7 @@ class ClothingItem extends Component {
 
     getUsersItems = async (userId, clothesId) => {
         try {
-            let allItems = await axios.get(`http://localhost:3000/items/user/${userId}/clothes/${clothesId}`);
+            let allItems = await axios.get(`/items/user/${userId}/clothes/${clothesId}`);
             return allItems.data.payload;
         }
         catch (err) {
@@ -67,13 +65,16 @@ class ClothingItem extends Component {
         const data = new FormData();
         data.append('image', this.state.image);
         try {
-            const res = await axios.post('http://localhost:3000/upload', data);
-            const post = await axios.post(`http://localhost:3000/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
+            const res = await axios.post('/upload', data);
+            const post = await axios.post(`/items`, { item_img: res.data.imageUrl, fabric_id: fabChoice, clothes_id: typeChoice, user_id: 1, color: colorChoice })
             console.log(post, 'posting')
             this.setClothingState(this.state.user_id, this.state.clothing_id)
         } catch (err) {
             console.log(err)
         }
+        // this.setState({
+        //     colorChoice:''
+        // })
 
     }
 
@@ -93,7 +94,7 @@ class ClothingItem extends Component {
                 <div className={determineClassName(item.score)} type={item.id}>
                     <h3>{username}'s {article}</h3>
                     <img src={item.img} alt={article} className="clothes-image" />
-                    <p><b>Fabric:</b> {" "}
+                    <p><b>Fabric Care:</b> {" "}
                         <Link to={`/${item.fabric}`}>
                             {item.fabric}
                         </Link>
@@ -103,7 +104,7 @@ class ClothingItem extends Component {
         })
         if (sugAmount <= clothes.length) {
             return (
-                <div>
+                <div className="clothing-item-component">
                     <h1>{username}</h1>
                     <div className="clothing-container">
                         {itemsCards}
@@ -113,8 +114,8 @@ class ClothingItem extends Component {
         }
         else {
             return (
-                <div>
-                    <h1>{username}</h1>
+                <div className = "clothing-item-component">
+                    <h1>Welcome to your closet, {username}!</h1>
                     <div className="clothing-container">
                         {itemsCards}
                         <div className="upload-item" onClick={this.handleNewItem}>

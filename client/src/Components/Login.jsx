@@ -1,18 +1,17 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import '../login.css';
+import '../css-files/Login.css';
 import MyCloset from './MyCloset';
 
 
 const Login = () => {
     return (
         <div>
-          
-            <div id="f">
+            <div>
                 <Link to="/myCloset" >
                     <h2 id="nameOfAppHeaderTag">Ethic Attire</h2>
                 </Link>
-         
+
             </div>
             <div className="">
                 <h2 className="login-title">Login</h2>

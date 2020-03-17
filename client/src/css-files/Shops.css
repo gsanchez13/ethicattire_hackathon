@@ -1,0 +1,55 @@
+.main{
+    padding-top: 10px;
+    text-align: left;
+}
+
+.ShopsHeading{
+    font-family: 'Questrial';
+    color:blue;
+}
+
+.shops-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    padding: auto;
+    margin: auto;
+    flex-wrap: wrap;
+
+}
+
+.shop-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    padding: 2px 16px;
+    width: 30%;
+    height: 60vh;
+    margin: 20px;
+}
+
+.shop-image {
+    margin:0 auto;
+    width: 150px;
+}
+
+
+p, h2{
+    font-family: 'Asap' ;
+}
+
+a{
+    font-family: 'Asap' ;
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+/* img{
+    width:150px;
+} */
