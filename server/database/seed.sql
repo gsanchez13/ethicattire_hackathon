@@ -36,7 +36,7 @@ CREATE TABLE items (
 );
 
 
-INSERT INTO users (username, password, style) 
+INSERT INTO users (username, password_digest, style) 
    VALUES ('Sarah', '123', false);
 
 INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img) 
