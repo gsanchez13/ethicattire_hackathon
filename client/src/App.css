@@ -7,7 +7,7 @@ html, body, #app, #app>div {
 }
 
 #headerComponentContainer {	
-  border: 1px;	h
+  border: 1px;	
   display: inline-block;	
 }	
 
@@ -38,7 +38,7 @@ html, body, #app, #app>div {
 
 #ClothingChecklistHeaderTag {	
   text-align: center;  
-  color: palevioletred;
+  color: navy;
 }
 
 #clothingCheckListHeaderDiv {
