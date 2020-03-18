@@ -9,6 +9,7 @@ class AuthContainer extends Component {
     username: '',
     password: ''
    }
+
   handleChange = (e) => {
     const inputName = e.target.name;
     const inputValue = e.target.value;
@@ -33,8 +34,10 @@ class AuthContainer extends Component {
     // Make network request to /auth/login to login user
     console.log('Logging user')
     try {
-      const { data } = await axios.post('/auth/login', this.state);      const user = data.payload;
+      const { data } = await axios.post('/auth/login', this.state);    
+      const user = data.payload;
       this.props.setUser(user);
+      
     } catch (err) {
       console.log('ERROR', err);
     }

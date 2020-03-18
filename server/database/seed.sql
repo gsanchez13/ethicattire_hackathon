@@ -7,8 +7,7 @@ CREATE DATABASE seed;
 CREATE TABLE users (
    id SERIAL PRIMARY KEY,
    username VARCHAR NOT NULL UNIQUE,
-   password_digest VARCHAR NOT NULL,
-   style BOOLEAN
+   password_digest VARCHAR NOT NULL
 );
 
 CREATE TABLE fabrics (
@@ -36,8 +35,8 @@ CREATE TABLE items (
 );
 
 
-INSERT INTO users (username, password_digest, style) 
-   VALUES ('Sarah', '123', false);
+INSERT INTO users (username, password_digest) 
+   VALUES ('Sarah', '123');
 
 INSERT INTO fabrics (fabric_type, score, fabric_desc, fabric_img) 
    VALUES('Hemp', 1, 'Hemp clothing is made from a natural fiber with many amazing advantages, both ecological 
