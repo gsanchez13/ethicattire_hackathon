@@ -18,7 +18,7 @@ class Fabrics extends Component {
   }
 
   getFabrics = async () => {
-    let fabricsUrl = "http://localhost:3100/fabrics";
+    let fabricsUrl = "/fabrics";
     try {
       const response = await axios.get(fabricsUrl);
       const data = response.data.payload;
