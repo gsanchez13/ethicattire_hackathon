@@ -12,15 +12,18 @@ const addNewUser = async (user) => {
 }
 
 const getUserById = async (user_id) => {
-        const user = await db.oneOrNone("SELECT * FROM users WHERE id = $1", [user_id])
+        const user = await db.oneOrNone("SELECT * FROM users WHERE id = $1", [user_id]);
         return user;
     
 }
 
-// Make a getUserByUsername
+const getUserByUsername = async (username) => {
+    const user = await db.oneOrNone("SELECT * FROM users WHERE username = $1", [username]);
+    return user;
+}
 
 module.exports = {
-
     addNewUser,
-    getUserById
+    getUserById,
+    getUserByUsername
 }
